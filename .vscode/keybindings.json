@@ -1,0 +1,17 @@
+[
+    {
+        "key": "ctrl+alt+insert",
+        "command": "editor.action.insertSnippet"
+    },
+    {
+        "key": "ctrl+shift+v",
+        "command": "extension.pasteImage",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+/",
+        "command": "editor.action.commentLine",
+        "when": "editorTextFocus"
+    }
+    
+]

@@ -1,0 +1,55 @@
+{
+	"white3": {
+		"prefix": "white3",
+		"description": "",
+		"scope": "",
+		"body": [
+			"float3(1.0, 1.0, 1.0);"
+		]
+	},
+	"uv2": {
+		"prefix": "uv2",
+		"description": "",
+		"scope": "",
+		"body": [
+			"float2(0.0, 0.0);"
+		]
+	},
+	"green3": {
+		"prefix": "green3",
+		"description": "",
+		"scope": "",
+		"body": [
+			"float3(0.0, 1.0, 0.0);"
+		]
+	},
+	"green41": {
+		"prefix": "green4",
+		"description": "",
+		"scope": "",
+		"body": [
+			"float4(0.0, 1.0, 0.0, 1.0);"
+		]
+	},
+	"CodeBlock": {
+		"prefix": "CodeBlock",
+		"description": "CodeBlock",
+		"scope": "markdown",
+		"body": [
+			"```",
+			"example",
+			"```"
+		]
+	},
+	"MdTable": {
+		"prefix": "MdTable",
+		"description": "MdTable",
+		"scope": "markdown",
+		"body": [
+			"| 列 1 | 列 2 |",
+			"|-------|-------|",
+			"|       |       |",
+			"|       |       |"
+		]
+	}
+}

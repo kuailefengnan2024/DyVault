@@ -1,0 +1,15 @@
+{
+    "pasteImage.basePath": "./images",
+    "pasteImage.path": "./images",
+    "pasteImage.prefix": "",
+    "pasteImage.showFilePathConfirmInputBox": false,
+    "pasteImage.filePathConfirmInputBoxMode": "onlyName",
+    
+    // 添加文件关联设置
+    "files.associations": {
+        "*.hlsl": "hlsl",
+        "*.fx": "hlsl"
+    }
+
+    
+}
