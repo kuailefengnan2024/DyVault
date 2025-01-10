@@ -1,4 +1,7 @@
 
+- **`.ush` ≈ Unity中的`.cginc`（复用代码片段）。  
+- **`.usf` ≈ Unity中的`.shader`（主要的Shader逻辑）。  
+- **`.cpp`** 用于UE引擎的底层逻辑，与Unity的Shader逻辑分开，无直接对标。
 
 >在Houdini中应用Ue的材质方法
 ![](d:/BaiduSyncdisk/DyVault/Notes/UE/images/2024-12-18-19-07-03.png)
