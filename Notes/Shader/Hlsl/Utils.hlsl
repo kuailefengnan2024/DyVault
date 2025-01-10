@@ -16,9 +16,6 @@ float4 fit(float4 value, float4 oldMin, float4 oldMax, float4 newMin, float4 new
     return newMin + (value - oldMin) * (newMax - newMin) / (oldMax - oldMin);
 }
 
-/* example
-float originValue = fit(0.5, 0.0, 1.0, -1.0, 1.0); // 从0.5映射到0
-*/
 
 // 添加重映射函数
 float remap(float value, float oldMin, float oldMax, float newMin, float newMax) {
@@ -26,5 +23,55 @@ float remap(float value, float oldMin, float oldMax, float newMin, float newMax)
 }
 
 
-// 归一化标量变量
-float normalizedValue = (Value - min) / (max - min);
+
+
+
+
+
+
+
+
+
+
+
+// 合并同一空间的法线向量
+float3 CombineNormals(float3 n1, float3 n2) {
+    // 合并 x 和 y 分量
+    float3 result;
+    result.xy = n1.xy + n2.xy;
+
+    // 归一化向量
+    result = normalize(result);
+
+    // 重建 z 分量
+    result.z = sqrt(saturate(1.0 - dot(result.xy, result.xy)));
+
+    return result;
+}
+
+
+
+
+
+
+// 合并不同空间的法线向量
+float3 CombineNormalsDifferentSpaces(float3 n1, float3 n2, float3x3 tangentToWorld) {
+    // 将切线空间法线转换到世界空间
+    float3 n1_world = mul(tangentToWorld, n1);
+
+    // 合并 x 和 y 分量
+    float3 result;
+    result.xy = n1_world.xy + n2.xy;
+
+    // 归一化向量
+    result = normalize(result);
+
+    // 重建 z 分量
+    result.z = sqrt(saturate(1.0 - dot(result.xy, result.xy)));
+
+    return result;
+}
+
+
+
+
