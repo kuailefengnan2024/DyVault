@@ -1,3 +1,19 @@
+>![](d:/BaiduSyncdisk/DyVault/Notes/Shader/images/2025-01-12-00-33-46.png)
+>添加后处理
+
+
+
+>![](d:/BaiduSyncdisk/DyVault/Notes/Shader/images/2025-01-12-00-32-01.png)
+>将法线贴图从0-1转换为-1-1
+
+| v乘以N | 结果不同 一个变换了向量 一个得到了菲尼尔 |
+|-------|-------|
+|  ![](d:/BaiduSyncdisk/DyVault/Notes/Shader/images/2025-01-11-22-37-33.png) | ![](d:/BaiduSyncdisk/DyVault/Notes/Shader/images/2025-01-11-22-37-42.png)      |
+|   ![](d:/BaiduSyncdisk/DyVault/Notes/Shader/images/2025-01-11-22-42-00.png)    |    ![](d:/BaiduSyncdisk/DyVault/Notes/Shader/images/2025-01-11-22-42-06.png) **注:此结果和0.5append可以构建uv**  |
+
+>法线范围是-1-1,而uv范围是0-1,所以由法线生成uv如下:(法线可以是世界也可以是其他的类型)
+>![](d:/BaiduSyncdisk/DyVault/Notes/Shader/images/2025-01-11-22-15-22.png)
+
 
 >##### 法线合并思路////z方向的特殊性，直接相加会丢细节
 >[输入法线向量/法线贴图] *若不同空间，转换到同一空间*
