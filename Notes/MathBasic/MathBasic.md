@@ -1,10 +1,92 @@
+
+---
+
+### 麦克斯韦方程组
+
+##### 电场与电荷密度的关系：  
+   \[
+   \nabla \cdot \mathbf{E} = \frac{\rho}{\varepsilon_0}
+   \]  
+   - \(\nabla \cdot \mathbf{E}\)：电场 \(\mathbf{E}\)（向量电场）的**散度**，表示电场在某点的发散程度。  
+   - \(\rho\)：电荷密度，表示单位体积内的电荷量。  
+   - \(\varepsilon_0\)：真空介电常数，表示真空中电场与电荷的关系。  
+
+##### 磁感应强度无散度：  
+   \[
+   \nabla \cdot \mathbf{B} = 0
+   \]  
+   - \(\nabla \cdot \mathbf{B}\)：磁场 \(\mathbf{B}\)（向量磁感应强度）的**散度**，表示磁场在某点的发散程度。  
+   - 0：表示磁场没有源或汇，即磁场的磁力线是闭合的。  
+
+##### 法拉第感应定律：  
+   \[
+   \nabla \times \mathbf{E} = -\frac{\partial \mathbf{B}}{\partial t}
+   \]  
+   - \(\nabla \times \mathbf{E}\)：电场 \(\mathbf{E}\) 的**旋度**，表示电场在某点的环绕程度。  
+   - \(-\frac{\partial \mathbf{B}}{\partial t}\)：磁场 \(\mathbf{B}\) 随时间 \(t\) 的变化率，表示磁场变化产生的感应电场。  
+   - ∂ 表示偏导数,多变量选一个,d针对单一变量
+
+##### 安培-麦克斯韦定律：  
+   \[
+   \nabla \times \mathbf{B} = \mu_0 \mathbf{J} + \mu_0 \varepsilon_0 \frac{\partial \mathbf{E}}{\partial t}
+   \]  
+   - \(\nabla \times \mathbf{B}\)：磁场 \(\mathbf{B}\) 的**旋度**，表示磁场在某点的环绕程度。  
+   - \(\mu_0\)：真空磁导率，表示真空中磁场与电流的关系。  
+   - \(\mathbf{J}\)：电流密度，表示单位面积上的电流量。  
+   - \(\varepsilon_0\)：真空介电常数，同上。  
+   - \(\frac{\partial \mathbf{E}}{\partial t}\)：电场 \(\mathbf{E}\) 随时间 \(t\) 的变化率，表示变化的电场产生的磁场。
+
+---
+
+### 三角符号（\(\nabla\)）的含义
+\(\nabla\) 是一个通用的微分算子，称为“梯度算子”或“Nabla算子”。可以表示梯度、散度和旋度，本质上是对场的方向导数操作具体：
+
+- **散度**：\(\nabla \cdot\) 结合点乘操作，计算的是一个标量（“流出/流入”）。  
+- **旋度**：\(\nabla \times\) 结合叉乘操作，计算的是一个向量（“旋转”方向）。  
+
+
+### 1. **梯度**（Gradient）  
+\[
+\nabla f = \left( \frac{\partial f}{\partial x}, \frac{\partial f}{\partial y}, \frac{\partial f}{\partial z} \right)
+\]  
+- 适用于标量场 \(f(x, y, z)\)。
+- **含义**：表示标量场在空间中变化最快的方向及变化率。  
+- **结果**：梯度的结果是一个**向量**。  
+
+
+
+### 2. **散度**（Divergence）  
+\[
+\nabla \cdot \mathbf{F} = \frac{\partial F_x}{\partial x} + \frac{\partial F_y}{\partial y} + \frac{\partial F_z}{\partial z}
+\]  
+- 适用于向量场 \(\mathbf{F} = (F_x, F_y, F_z)\)。  
+- **含义**：散度表示向量场在某点的“流出”或“流入”程度，正值表示“发散”（源），负值表示“汇聚”（汇）。  
+- **结果**：散度的结果是一个**标量**。
+
+
+
+### 3. **旋度**（Curl）  
+\[
+\nabla \times \mathbf{F} = \left( 
+\frac{\partial F_z}{\partial y} - \frac{\partial F_y}{\partial z}, 
+\frac{\partial F_x}{\partial z} - \frac{\partial F_z}{\partial x}, 
+\frac{\partial F_y}{\partial x} - \frac{\partial F_x}{\partial y}
+\right)
+\]  
+- 适用于向量场 \(\mathbf{F} = (F_x, F_y, F_z)\)。  
+- **含义**：旋度表示向量场在某点的“旋转”程度及方向。  
+- **结果**：旋度的结果是一个**向量**。
+
+
+
+---
+
+
 ## 矩阵与向量乘法
 - 矩阵在前，向量在后：`Mv` 等价于 `vM^T`  
   （`M^T` 是矩阵 `M` 的转置,v一般竖着写)
 
----
 
-## 正交矩阵与逆矩阵
 ### 正交矩阵
 对于方阵，正交矩阵转置等于它的逆矩阵：`M^T = M^-1`
 
@@ -12,7 +94,6 @@
 - 定义：`M * M^-1 = I`  
 - 适用：任意可逆矩阵
 
----
 
 ### 线性变换
 - 满足：
@@ -26,20 +107,8 @@
 ### 非线性变换
 - 不满足线性变换的性质
 - 例子：平移
+- 故引入齐次坐标 **齐次坐标本质上是坐标系的升维切片**
 
----
-
-## 齐次坐标与升维切片
-- 定义：将二维或三维坐标扩展为高维表示
-  - 2D：点 `(x, y)` → `(x, y, w)`
-  - 3D：点 `(x, y, z)` → `(x, y, z, w)`
-- `w` 分量：
-  - `w = 1`：普通笛卡尔坐标
-  - `w = 0`：无穷远点（投影变换）
-- **升维**：从低维扩展为高维齐次坐标  
-  例：`(x, y)` → `(x, y, 1)`
-- **切片**：从高维还原低维笛卡尔坐标  
-  例：`(x, y, w)` → `(x / w, y / w)`
 
 ---
 

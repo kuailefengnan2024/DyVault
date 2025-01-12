@@ -1,3 +1,19 @@
+
+>![](d:/BaiduSyncdisk/DyVault/Notes/Shader/images/2025-01-12-14-45-54.png)
+>![](d:/BaiduSyncdisk/DyVault/Notes/Shader/images/2025-01-12-14-47-04.png)
+>![](d:/BaiduSyncdisk/DyVault/Notes/Shader/images/2025-01-12-14-47-20.png)
+>![](d:/BaiduSyncdisk/DyVault/Notes/Shader/images/2025-01-12-14-47-38.png)
+>![](d:/BaiduSyncdisk/DyVault/Notes/Shader/images/2025-01-12-14-59-17.png)
+
+
+
+
+| 通过光程节点可以控制| 物体阴影的颜色甚至有无 |
+|-------|-------|
+| ![](d:/BaiduSyncdisk/DyVault/Notes/Shader/images/2025-01-12-13-17-38.png)   | ![](d:/BaiduSyncdisk/DyVault/Notes/Shader/images/2025-01-12-13-17-57.png)      |
+
+
+
 >![](d:/BaiduSyncdisk/DyVault/Notes/Shader/images/2025-01-12-00-33-46.png)
 >添加后处理
 
