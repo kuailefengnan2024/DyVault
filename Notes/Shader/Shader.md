@@ -1,3 +1,9 @@
+![](d:/BaiduSyncdisk/DyVault/Notes/Shader/images/2025-01-13-12-59-48.png)
+![](d:/BaiduSyncdisk/DyVault/Notes/Shader/images/2025-01-13-13-45-21.png)
+![](d:/BaiduSyncdisk/DyVault/Notes/Shader/images/2025-01-13-13-02-49.png)
+- 前向渲染：逐物体逐像素计算光照，适合简单场景。
+- 延迟渲染：分阶段计算，更适合复杂场景。
+- Blender Cycles 的渲染模式更偏向于物理路径追踪，与实时渲染路径的概念有较大不同。
 
 >![](d:/BaiduSyncdisk/DyVault/Notes/Shader/images/2025-01-12-14-45-54.png)
 >![](d:/BaiduSyncdisk/DyVault/Notes/Shader/images/2025-01-12-14-47-04.png)
@@ -167,7 +173,35 @@ Shader "CS0102/最简化Shader"
 
 ---
 >#### 总览
->![](d:/BaiduSyncdisk/DyVault/Notes/Shader/images/2025-01-04-16-42-55.png)
+>![](d:/BaiduSyncdisk/DyVault/Notes/Shader/images/2025-01-13-13-15-39.png)
+
+>##### RenderPath(发生在片元和合并阶段)
+>1. **前向渲染**：
+>   - 在 **片元处理阶段**直接完成光照计算。在输出合并阶段对各片元的光照结果直接与颜色缓冲区合并。
+>   - 光源数量对性能影响大。支持透明
+>2. **延迟渲染**：            
+>   - 在 **片元处理阶段**生成G-Buffer，推迟到输出合并阶段进行光照计算。
+>   - 适合多光源和复杂场景。不支持透明
+
+```
+// 定义一个 CBuffer  是一组缓冲区
+CBUFFER_START(UnityPerFrame)
+    float4x4 _CameraToWorld;   // 相机的世界矩阵
+    float4x4 _CameraProjection; // 相机的投影矩阵
+    float4 _Time;              // 时间变量
+CBUFFER_END
+
+// GBuffer 是一组缓冲区，而不是单个结构体，可用结构体描述
+struct GBufferOutput {
+    float4 Albedo : SV_Target0;   // 漫反射颜色
+    float4 Normal : SV_Target1;   // 法线
+    float4 Specular : SV_Target2; // 镜面反射颜色
+    float Depth : SV_Target3;     // 深度值
+};
+
+```
+---
+
 ![](d:/BaiduSyncdisk/DyVault/Notes/Shader/images/2025-01-04-17-04-47.png)
 >##### CPU阶段---(锥剔---排序---DrawCall)
 >##### GPU阶段---(V模裁剪---R背剔屏光栅---F光纹---O深模啊混) 
