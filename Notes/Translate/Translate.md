@@ -1,3 +1,8 @@
+petals，花瓣，꽃잎；
+stamens，花蕊，수술；
+flower stalk，花杆，꽃대；
+calyx，花萼，꽃받침；
+
 slate，石板，슬레이트；
 splash，溅，물보라；
 급여，薪水，급여；
