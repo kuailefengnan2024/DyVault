@@ -1,0 +1,75 @@
+{
+    "Shader": "GridTransparency", 
+    "Pass": 
+    [
+        {
+            "Ausl": "a1",
+            "Cull": "None",
+            "DepthWriteEnable": "Off",
+            "BlendMode": "Transparent",
+            "ZTest": "LessEqual",
+            "UseFBOFetch": "Off",
+            "UseFBOTexture": "Off"
+        }
+    ]
+}
+---ENDJSON
+---BEGIN UIPROPERTY
+$Main Settings$
+_TransparencyProgress (Transparency Progress, Range(0.0, 64.0)) = 0.0
+_GridColor (Grid Color, Color) = [1.000000, 1.000000, 1.000000, 1.000000]
+_BaseColorTexture (Base Color Texture, 2D) = "Default_Material_BaseColor"
+_RoughnessTexture (Roughness Texture, 2D) = "Default_Material_Roughness"
+---END UIPROPERTY
+---BEGIN a1
+#version 300 es
+#pragma only_renderers glsl30 metal
+
+// Attributes
+#pragma input attributes
+in vec3 attPosition; // 顶点位置
+in vec2 attTexcoord0; // UV 坐标
+#pragma end
+
+// Varyings
+#pragma varying varyings
+highp vec2 g_vary_uv0; // 传递 UV 坐标
+#pragma end
+
+// Output
+#pragma output targets
+out highp vec4 o_fragColor; // 最终输出颜色
+#pragma end
+
+// Uniforms
+#pragma vs attributes varyings
+precision highp float;
+uniform mat4 u_MVP; // 模型视图投影矩阵
+#pragma end
+
+#pragma fs varyings targets
+precision highp float;
+uniform vec4 _GridColor; // 网格颜色
+uniform float _TransparencyProgress; // 透明度进度
+uniform sampler2D _BaseColorTexture; // 基础颜色纹理
+uniform sampler2D _RoughnessTexture; // 粗糙度纹理
+#pragma end
+
+void vertex() {
+    g_vary_uv0 = attTexcoord0; // 传递 UV 坐标到片段着色器
+    gl_Position = u_MVP * vec4(attPosition, 1.0); // 计算顶点位置
+}
+
+void fragment() {
+    vec2 gridUV = floor(g_vary_uv0 * 8.0); // 计算当前 UV 所在的格子索引
+    float gridIndex = gridUV.y * 8.0 + gridUV.x; // 计算格子的线性索引 (0~63)
+    float alpha = step(gridIndex, _TransparencyProgress); // 使用透明度进度参数来控制透明度
+
+    // 从基础颜色纹理中采样颜色
+    vec4 baseColor = texture(_BaseColorTexture, g_vary_uv0); // 基础颜色纹理采样
+    float roughness = texture(_RoughnessTexture, g_vary_uv0).r; // 粗糙度纹理采样（仅参考）
+
+    // 计算最终颜色输出
+    o_fragColor = vec4(baseColor.rgb * _GridColor.rgb, alpha * baseColor.a); // 使用透明度参数和基础颜色计算最终输出
+}
+---END a1

@@ -1,0 +1,43 @@
+{
+    "Shader": "PetalGlow",
+    "Pass": [
+        {
+            "Vert": "v1",
+            "Frag": "f1",
+            "Cull": "Back",
+            "DepthWriteEnable": "Off",
+            "ZTest": "Less"
+        }
+    ]
+}
+---ENDJSON
+
+---BEGIN v1
+precision highp float;
+attribute vec3 attPosition;
+attribute vec2 attTexcoord0;
+uniform mat4 u_MVP;
+varying vec2 varTexcoord0;
+
+void main() {
+    varTexcoord0 = attTexcoord0;
+    gl_Position = u_MVP * vec4(attPosition, 1.0);
+}
+---END v1
+
+---BEGIN f1
+precision highp float;
+uniform sampler2D u_AlbedoTexture;
+uniform vec4 u_AlbedoColor;
+uniform float u_GlowIntensity;
+uniform vec3 u_GlowColor;
+varying vec2 varTexcoord0;
+
+void main() {
+    vec4 baseColor = texture2D(u_AlbedoTexture, varTexcoord0);
+    if (baseColor.a < 0.1) discard;
+    vec3 glowEffect = baseColor.rgb * u_GlowIntensity * u_GlowColor;
+    vec4 finalColor = vec4(baseColor.rgb + glowEffect, baseColor.a);
+    gl_FragColor = finalColor;
+}
+---END f1
