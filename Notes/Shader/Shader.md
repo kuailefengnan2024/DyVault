@@ -1,3 +1,10 @@
+>视差映射:https://segmentfault.com/a/1190000003920502
+>视差映射目的，精确的计算viewdir和高度图定义出来的表面的交点。
+>![](d:/BaiduSyncdisk/DyVault/Notes/Shader/images/2025-01-21-13-24-56.png)
+>视差映射的计算是在切空间进行的（跟法线映射一样）,所以lightdir和viewdir应该先转换为切空间
+
+<iframe frameborder="0" style="width:100%;height:234px;" src="https://viewer.diagrams.net/?tags=%7B%7D&highlight=0000ff&edit=_blank&layers=1&nav=1&title=#R5VhLk%2BI2EP41OoaSLT%2Fkow0me0iqtmoOSY5eLMA1ArFGvPLr0y3JBj%2FYJbPMVlJzAXWrW1Lr%2B7olmbDp5vxrXezWv6tSSOLT8kzYjPg%2Boxx%2BUXGxiphFVrGqq9KqvKvipfpbOCV12kNVin3HUCsldbXrKhdquxUL3dEVda1OXbOlkt1Zd8VKDBQvi0IOtX9UpV5bLQ%2FpVf9JVKt1M7NHXc%2BmaIydYr8uSnW6UbGcsGmtlLatzXkqJO5dsy%2FWb36nt11YLbb6EYfAOhwLeXCxuXXpSxOsKCF2J27VFv6ytd5IkDxoWnO0ubsCp9qrQ71wVm4WXdQr4axYGz2wRqiN0PUFTGohC10du6MXDr9Va3cNERouyvGI%2FQcilhKYhIGe1pUWL7vCrPsEXB4L%2FihqLc7fDn8YmHPwuWOCSwXPd6lwuhLLp7HVrW9IlQQ%2Fvhde%2BC%2FRXqqtdumYgAgx1pc%2FQaCN8BcKk7ARZ%2BfbztnFSW8jDRuSxot%2BkDXO9bOqYOIWFJb4HVCCJl2bIewanFdvv9tlPAQB%2B2%2FRMYx6dGTegI5emAzpyOn9TX6Yjt5wM3JO0pjwiOQhyWKS5iSPSZKZRkRSSnhMWIrKzCeZ6U0908vxF9q58UriYyVOZVXjQAAvn5I8IWlGEm6GTklq5oChcZTQ%2BMC4AckSwhMza0p4YMaFCTi6JzOS%2BsYG3AO04T7a9xEEPHQXqr2u1auYKqnqa6ItKyl7qkJWqy2IC8BPgD5DdCs4iVLXsanKUt7jRq0O21KULuv2r0Iv1k7oZfITqMP8aBJ2yRMOa5nnj9Qy9gzyjBX2SGoXq7kN2K0F9dcDHrAQNfO8L4slvVVFK%2FMPFOAc2YX8SRBhBBxoFjTDworsyDceEeEhUiSbI5MsV4Bq%2FvSGdhHJGElCw9kULUEDLAQuIxGpIRlQCianjuNZ%2FDEpFYbdatRWmU41ou9EqGFp7pcQiTMahY%2FQg%2B6WNQ7cIX0%2BJJQxm8S98hD8zPIwctO1YKW2uAempg9Pm%2F4xYrwMuJi2ESasw9qOQ507nA0Jbc%2Bow%2FGjwh5O%2FB7s0c%2BEPXri%2Feqd94rT%2FlNg5O7FonY%2FO6%2BBZ%2BxV%2FECKAJFHUsKUvNTWOI41DvNnRjIPJ0f7OcnsATnHnMGbl0%2BSqXFM8OaWGy%2FraK9g446Ds%2FNDZhWnwSTqPlG8cIQs75ZV%2FPtZtV8XO2wuDrW8ZHWxeMVH2%2FdS7LqNKMnii5Cf1b7SlUIEpFjqG2B%2B63W3ADVQ1jbs%2B0h%2BC6da6cIN%2FEtCnwNc5HVrYTjAzB%2B5zYT95%2BebvnvQkexOMI2z6PpywTSfmYtnm5mQkAmejf%2B%2FTENx2l76GaU5nz8LSOpNItbBcuRuGnujxfoNKQji9aOg%2Fcxw%2FbLK8n8A"></iframe>
+
 | **名称** | **保留信息** |
 |----------|--------------|
 | **MDD**  | - 逐帧的顶点位置（`x, y, z` 坐标）<br>- 动画帧数和时间信息（帧间隔或时间戳）<br>- 不包含拓扑结构（需要结合静态网格文件） |
