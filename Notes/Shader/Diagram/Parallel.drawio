@@ -1,6 +1,6 @@
 <mxfile host="65bd71144e">
     <diagram id="wMYUmtTT3Vu4AIqwuH7Y" name="Page-1">
-        <mxGraphModel dx="1006" dy="883" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+        <mxGraphModel dx="949" dy="841" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -8,39 +8,39 @@
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
                 <mxCell id="2" value="" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-                    <mxGeometry x="280" y="126" width="207" height="94" as="geometry"/>
+                    <mxGeometry x="50" y="351" width="207" height="94" as="geometry"/>
                 </mxCell>
                 <mxCell id="15" style="edgeStyle=none;html=1;fontSize=9;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="3" target="16" edge="1">
                     <mxGeometry relative="1" as="geometry">
-                        <mxPoint x="392" y="420" as="targetPoint"/>
+                        <mxPoint x="162" y="645" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
                 <mxCell id="3" value="" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-                    <mxGeometry x="560" y="131" width="159" height="80" as="geometry"/>
+                    <mxGeometry x="330" y="356" width="159" height="80" as="geometry"/>
                 </mxCell>
                 <mxCell id="11" value="视差目标:精确计算viewdir和高度图定义的表面交点" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;sketch=0;fontSize=11;" parent="1" vertex="1">
-                    <mxGeometry x="300" y="156" width="153.5" height="30" as="geometry"/>
+                    <mxGeometry x="70" y="381" width="153.5" height="30" as="geometry"/>
                 </mxCell>
                 <mxCell id="12" value="&lt;font color=&quot;#11bcf0&quot; style=&quot;font-size: 13px;&quot;&gt;切空间&lt;/font&gt;内进行,和法线映射一样" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;sketch=0;fontSize=13;" parent="1" vertex="1">
-                    <mxGeometry x="535" y="280" width="180" height="30" as="geometry"/>
+                    <mxGeometry x="305" y="505" width="180" height="30" as="geometry"/>
                 </mxCell>
                 <mxCell id="13" value="viewdir和lightdir→切线空间" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;sketch=0;fontSize=11;" parent="1" vertex="1">
-                    <mxGeometry x="573.75" y="146" width="127" height="30" as="geometry"/>
+                    <mxGeometry x="343.75" y="371" width="127" height="30" as="geometry"/>
                 </mxCell>
                 <mxCell id="14" value="利用视差计算出新纹理坐标uv" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;sketch=0;fontSize=11;" parent="1" vertex="1">
-                    <mxGeometry x="560" y="166" width="164.75" height="30" as="geometry"/>
+                    <mxGeometry x="330" y="391" width="164.75" height="30" as="geometry"/>
                 </mxCell>
                 <mxCell id="16" value="" style="ellipse;whiteSpace=wrap;html=1;sketch=0;fontSize=9;" parent="1" vertex="1">
-                    <mxGeometry x="800" y="121" width="136.25" height="90" as="geometry"/>
+                    <mxGeometry x="570" y="346" width="136.25" height="90" as="geometry"/>
                 </mxCell>
                 <mxCell id="17" value="利用uv计算自阴影/读取颜色贴图/读取法线" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;sketch=0;fontSize=11;" parent="1" vertex="1">
-                    <mxGeometry x="804.62" y="151" width="127" height="30" as="geometry"/>
+                    <mxGeometry x="574.62" y="376" width="127" height="30" as="geometry"/>
                 </mxCell>
                 <mxCell id="18" value="" style="shape=curlyBracket;whiteSpace=wrap;html=1;rounded=1;labelPosition=left;verticalLabelPosition=middle;align=right;verticalAlign=middle;sketch=0;fontSize=9;rotation=-90;" parent="1" vertex="1">
-                    <mxGeometry x="615" y="5" width="20" height="520" as="geometry"/>
+                    <mxGeometry x="385" y="230" width="20" height="520" as="geometry"/>
                 </mxCell>
                 <mxCell id="20" value="顶点着色器" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;sketch=0;fontSize=15;fontColor=#00E8F0;" parent="1" vertex="1">
-                    <mxGeometry x="593.0699999999999" y="91" width="88.37" height="30" as="geometry"/>
+                    <mxGeometry x="363.06999999999994" y="316" width="88.37" height="30" as="geometry"/>
                 </mxCell>
             </root>
         </mxGraphModel>
