@@ -12,15 +12,5 @@
         "key": "ctrl+/",
         "command": "editor.action.commentLine",
         "when": "editorTextFocus"
-    },
-    {
-        "key": "ctrl+shift+[",
-        "command": "editor.fold",
-        "when": "editorTextFocus && foldingEnabled"
-    },
-    {
-        "key": "ctrl+shift+]",
-        "command": "editor.unfold",
-        "when": "editorTextFocus && foldingEnabled"
     }
 ]

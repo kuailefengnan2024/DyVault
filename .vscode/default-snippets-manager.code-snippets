@@ -1,4 +1,16 @@
 {
+	"Fold": {
+		"prefix": "Fold",
+		"description": "",
+		"scope": "",
+		"body": [
+			"<!-- region iframe -->",
+			"<iframe frameborder=\"0\" style=\"width:100%;height:234px;\" src=\"...\">",
+			"</iframe>",
+			"",
+			"<!-- endregion -->"
+		]
+	},
 	"white3": {
 		"prefix": "white3",
 		"description": "",
