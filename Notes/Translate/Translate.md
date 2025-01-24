@@ -2,6 +2,9 @@ petals，花瓣，꽃잎；
 stamens，花蕊，수술；
 flower stalk，花杆，꽃대；
 calyx，花萼，꽃받침；
+decent 精致的极好的
+suffix 后缀
+prefix 前缀
 
 slate，石板，슬레이트；
 splash，溅，물보라；
