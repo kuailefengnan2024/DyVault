@@ -1,11 +1,22 @@
-Background： 1000
-Geometry： 2000
-AlphaTest： 2450
-Transparent： 3000
-Overlay： 4000
 
-Renderqueue感觉可以理解为优先级更高的depth
+---
+
+>##### RenderQueue
+>Background： 1000
+>Geometry： 2000
+>AlphaTest： 2450
+>Transparent： 3000
+>Overlay： 4000
+>Renderqueue感觉可以理解为优先级更高的depth
 stencil test 的值不是展示的颜色值 而是比较值
+>Renderqueue > 模版测试优先级priority > 比深度测试高
+
+>##### 大体思路：
+>- 先用Renderqueue理清大组先后顺序
+>- 再选定一个模版测试标杆如镜子，供后续比较使用
+>- 最后深度测试调节每个小组内的前后
+
+---
 
 
 >视差映射:https://segmentfault.com/a/1190000003920502
