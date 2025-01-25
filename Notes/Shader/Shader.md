@@ -1,3 +1,13 @@
+Background： 1000
+Geometry： 2000
+AlphaTest： 2450
+Transparent： 3000
+Overlay： 4000
+
+Renderqueue感觉可以理解为优先级更高的depth
+stencil test 的值不是展示的颜色值 而是比较值
+
+
 >视差映射:https://segmentfault.com/a/1190000003920502
 >视差映射目的，精确的计算viewdir和高度图定义出来的表面的交点。
 >![](d:/BaiduSyncdisk/DyVault/Notes/Shader/images/2025-01-21-13-24-56.png)
