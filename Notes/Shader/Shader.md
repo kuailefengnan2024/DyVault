@@ -1,4 +1,11 @@
+![](d:/BaiduSyncdisk/DyVault/Notes/Shader/images/2025-01-26-15-00-24.png)
 法线贴图是像素级法线
+![](d:/BaiduSyncdisk/DyVault/Notes/Shader/images/2025-01-26-15-33-15.png)
+![](d:/BaiduSyncdisk/DyVault/Notes/Shader/images/2025-01-26-15-35-10.png)
+
+![](d:/BaiduSyncdisk/DyVault/Notes/Shader/images/2025-01-26-15-40-50.png)
+![](d:/BaiduSyncdisk/DyVault/Notes/Shader/images/2025-01-26-15-53-39.png)
+![](d:/BaiduSyncdisk/DyVault/Notes/Shader/images/2025-01-26-16-11-34.png)
 
 ---
 
