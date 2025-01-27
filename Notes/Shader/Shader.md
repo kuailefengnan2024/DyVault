@@ -1,8 +1,27 @@
 unity中平行光的xyz信息是表示方向的
+光源类型区别在于light_dir
+>![](../Users/bytedance/DyVault/Notes/Shader/images/2025-01-27-21-12-56.png)
+>shader内模拟点光
 
+切线空间坐标系中的法线是包含在网格数据中 切线：uv中u的走向引擎产生
+![](d:/BaiduSyncdisk/DyVault/Notes/Shader/images/2025-01-27-14-03-18.png)
 
+```
+// 法线贴图（像素级法线）强度思路：
+1.使用顶点数据中的切线和法线构建正交基
+2.像素级法线xy 分别✖️ 片元级法线的xy，
+3.将其作为法线与光照点乘生成光照模型
 
+                float3 normal = normalize(i.normal); // z
+                float3 tangent = normalize(i.tangent); // x
+                float3 bitangent = normalize(i.bitangent); // y
+                float3 normal_dir = normalize(tangent * normal_data.x + bitangent * normal_data.y + normal * normal_data.z);
 
+                为了将法线从切线空间转换到世界空间，需要使用切线、双切线和法线三个向量。这三个向量构成了一个正交基，可以用来将切线空间的法线向量转换到世界空间。
+
+```
+
+![](d:/BaiduSyncdisk/DyVault/Notes/Shader/images/2025-01-27-18-33-28.png)
 ![](d:/BaiduSyncdisk/DyVault/Notes/Shader/images/2025-01-26-15-00-24.png)
 法线贴图是像素级法线
 ![](d:/BaiduSyncdisk/DyVault/Notes/Shader/images/2025-01-26-15-33-15.png)
