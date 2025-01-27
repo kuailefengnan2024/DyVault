@@ -1,3 +1,8 @@
+unity中平行光的xyz信息是表示方向的
+
+
+
+
 ![](d:/BaiduSyncdisk/DyVault/Notes/Shader/images/2025-01-26-15-00-24.png)
 法线贴图是像素级法线
 ![](d:/BaiduSyncdisk/DyVault/Notes/Shader/images/2025-01-26-15-33-15.png)
@@ -6,6 +11,25 @@
 ![](d:/BaiduSyncdisk/DyVault/Notes/Shader/images/2025-01-26-15-40-50.png)
 ![](d:/BaiduSyncdisk/DyVault/Notes/Shader/images/2025-01-26-15-53-39.png)
 ![](d:/BaiduSyncdisk/DyVault/Notes/Shader/images/2025-01-26-16-11-34.png)
+![](d:/BaiduSyncdisk/DyVault/Notes/Shader/images/2025-01-26-16-19-16.png)
+![](d:/BaiduSyncdisk/DyVault/Notes/Shader/images/2025-01-26-16-21-51.png)
+![](d:/BaiduSyncdisk/DyVault/Notes/Shader/images/2025-01-26-16-22-48.png)
+![](d:/BaiduSyncdisk/DyVault/Notes/Shader/images/2025-01-26-16-26-17.png)
+![](d:/BaiduSyncdisk/DyVault/Notes/Shader/images/2025-01-26-16-28-17.png)
+![](d:/BaiduSyncdisk/DyVault/Notes/Shader/images/2025-01-26-16-31-20.png)
+![](d:/BaiduSyncdisk/DyVault/Notes/Shader/images/2025-01-26-17-08-43.png)
+![](d:/BaiduSyncdisk/DyVault/Notes/Shader/images/2025-01-26-17-34-25.png)
+![](d:/BaiduSyncdisk/DyVault/Notes/Shader/images/2025-01-26-20-58-43.png)
+
+
+| 渲染路径         | LightMode Tag     | 描述                                   |
+|------------------|-------------------|---------------------------------------|
+| **前向渲染**     | `ForwardBase`     | 渲染基础光照（主光源 + 环境光）。      |
+|                  | `ForwardAdd`      | 累加逐像素光照（点光源/聚光灯）。      |
+|                  | `ShadowCaster`    | 生成阴影贴图（通用）。                 |
+| **延迟渲染**     | `Deferred`        | 几何阶段，将材质属性输出到 GBuffer。   |
+|                  | `DepthNormals`    | 生成深度 + 法线贴图，用于后处理。       |
+
 
 ---
 
