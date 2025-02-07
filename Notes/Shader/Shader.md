@@ -20,7 +20,7 @@
 | **IBL（基于图像的光照）** | `reflectionVec = reflect(viewDir, normal)`<br>`indirectSpecular = sampleCubemap(envMap, reflectionVec)` | 间漫和间镜  **以反射向量R(来源于View和Normal)采样HDR环境贴图** |
 | **AO（环境光遮蔽）** | `occlusion = sample(AO_Texture, UV)`<br>`ambientLight *= occlusion` | 计算 **表面对环境光的遮挡程度**，使遮挡区域变暗，提高真实感，适用于 **环境光遮蔽**。 |
 
-现在表格更加清晰，重点概念也更突出。你如果有更具体的需求，比如 **PBR 物理光照模型的实现** 或 **如何优化这些计算**，可以继续聊！
+
 
 unity中**Directionlight**的xyz信息是表示方向的
 光源类型区别在于light_dir
