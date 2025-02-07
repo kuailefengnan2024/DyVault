@@ -1,4 +1,17 @@
-unity中平行光的xyz信息是表示方向的
+整理后，合并 **“一句话说明原理”** 和 **“相关光照部分”**，并把重点概念加粗：  
+
+| 名称          | 抽象化的原理（伪代码） | 说明 |
+|--------------|------------------|-------------------------------|
+| **Lambert** | `diffuse = surfaceColor * lightColor * max(dot(normal, lightDir), 0)` |   直漫 **法线N * 光照方向L**， |
+| **Phong** | `reflectDir = reflect(-lightDir, normal)`<br>`specular = lightColor * pow(max(dot(viewDir, reflectDir), 0), shininess)` | 直镜 **反射方向R(来源于直接光L和Normal) * 观察方向V的夹角**  |
+| **Blinn-Phong** | `halfwayDir = normalize(lightDir + viewDir)`<br>`specular = lightColor * pow(max(dot(normal, halfwayDir), 0), shininess)` | 直镜 **Halfway Vector（中间向量）** 替代反射向量，计算更快且更真实，**法线N dot 中间向量H**。 |
+| **SH（球谐光照）** | `indirectDiffuse = dot(SH_Coefficients, normal)` | 环境和间漫 由 **球谐系数SH dot 法线向量N**  |
+| **IBL（基于图像的光照）** | `reflectionVec = reflect(viewDir, normal)`<br>`indirectSpecular = sampleCubemap(envMap, reflectionVec)` | 间漫和间镜  **以反射向量R(来源于View和Normal)采样HDR环境贴图** |
+| **AO（环境光遮蔽）** | `occlusion = sample(AO_Texture, UV)`<br>`ambientLight *= occlusion` | 计算 **表面对环境光的遮挡程度**，使遮挡区域变暗，提高真实感，适用于 **环境光遮蔽**。 |
+
+现在表格更加清晰，重点概念也更突出。你如果有更具体的需求，比如 **PBR 物理光照模型的实现** 或 **如何优化这些计算**，可以继续聊！
+
+unity中**Directionlight**的xyz信息是表示方向的
 光源类型区别在于light_dir
 >![](../Users/bytedance/DyVault/Notes/Shader/images/2025-01-27-21-12-56.png)
 >shader内模拟点光
