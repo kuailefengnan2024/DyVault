@@ -1,3 +1,28 @@
+>Tags{"LightMode"="ForwardBase"}
+>确认主光源 防止混乱
+
+
+| **内置变量**                                                                 | **数据类型** | **注释**         |
+|-------------------------------------------------------------------------------|--------------|------------------|
+| _WorldSpaceLightPos0（光源位置0）, _WorldSpaceLightPos1（光源位置1）          | `float4`     | 光源位置         |
+| _LightColor0（光源颜色0）, _LightColor1（光源颜色1）                          | `float4`     | 光源颜色         |
+| _LightIntensity0（光源强度0）, _LightIntensity1（光源强度1）                  | `float`      | 光源强度         |
+| _ShadowMatrix0（阴影矩阵0）, _ShadowMatrix1（阴影矩阵1）                      | `float4x4`   | 阴影矩阵         |
+| _CameraDepthTexture（深度纹理）                                              | `Texture2D`  | 深度纹理         |
+| _ProjectionParams（投影参数）                                                | `float4`     | 投影参数         |
+| _CameraMain（主相机）                                                        | `Camera`     | 主相机           |
+| _Object2World（物体到世界矩阵）, _World2Object（世界到物体矩阵）              | `float4x4`   | 物体变换矩阵     |
+| _Time（时间）, _TimeParams（时间参数）, _SinTime（正弦时间）                  | `float4`     | 时间信息         |
+| _ViewMatrix（视图矩阵）, _ProjectionMatrix（投影矩阵）                        | `float4x4`   | 视图矩阵         |
+| _Color（颜色）, _SpecColor（高光颜色）, _MainTex（主纹理）                    | `float4`, `Texture2D` | 材质与颜色       |
+| _BumpMap（法线贴图）                                                         | `Texture2D`  | 法线贴图         |
+| _EmissionColor（发光颜色）                                                   | `float4`     | 发光颜色         |
+| _AmbientSkyColor（天光颜色）, _AmbientEquatorColor（赤道光颜色）, _AmbientGroundColor（地面光颜色） | `float4`     | 环境光颜色       |
+| _ScreenParams（屏幕参数）                                                    | `float4`     | 屏幕参数         |
+| _DepthTexture（深度纹理）                                                    | `Texture2D`  | 深度纹理         |
+
+这样每个变量后边都有了对应的中文翻译，方便理解。
+
 >**PBR核心:Cook-Torrance BRDF**
 *f_r镜反射强度 = (F * D * G) / (4 * (N·L) * (N·V))*
 >PBR公式:
