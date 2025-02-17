@@ -33,7 +33,7 @@
 **GI**  间镜 + 间漫
 **PBR结果** 漫 + 镜 + 遮蔽
 **f_r**：镜面反射强度 计算 直镜 + 间镜
-
+![](d:/BaiduSyncdisk/DyVault/Notes/Shader/images/2025-02-17-17-50-02.png)
 
 
 | 名称          | 抽象化的原理（伪代码） | 说明 |
