@@ -43,7 +43,7 @@
 所以:
 
 
->**PBR核心:Cook-Torrance BRDF**
+>**PBR核心:Cook-Torrance BRDF**(直镜 直漫)
 *f_r镜反射强度 = (F * D * G) / (4 * (N·L) * (N·V))*
 >PBR公式:
 >![](d:/BaiduSyncdisk/DyVault/Notes/Shader/images/2025-02-07-11-48-23.png)
