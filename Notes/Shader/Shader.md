@@ -84,7 +84,7 @@
 
 unity中**Directionlight**的xyz信息是表示方向的
 光源类型区别在于light_dir
->![](../Users/bytedance/DyVault/Notes/Shader/images/2025-01-27-21-12-56.png)
+>![](d:/BaiduSyncdisk/DyVault/Notes/Shader/images/2025-01-27-21-12-56.png)
 >shader内模拟点光
 
 切线空间坐标系中的法线是包含在网格数据中 切线：uv中u的走向引擎产生
