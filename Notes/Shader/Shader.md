@@ -40,7 +40,7 @@
 >float kS = calculateSpecularComponent(...); // 反射/镜面 部分
 >float kD = 1.0 - ks;                        // 折射/漫反射 部分
 >```
-所以先计算反射部分的方程如下:
+所以:
 
 
 >**PBR核心:Cook-Torrance BRDF**
