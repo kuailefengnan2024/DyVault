@@ -6,7 +6,7 @@
 >先添加layer 后添加volume
 >CubeMap中HDR贴图需要decode 防止移动端无法识别 另外贴图格式需要正确 否则效果失真/ 法线是Unpack
 >**旋转HDR贴图的方法:**
-![](d:/BaiduSyncdisk/DyVault/Notes/Shader/images/2025-02-19-12-29-05.png)
+![](d:/BaiduSyncdisk/DyVault/Notes/Shader/images/2025-02-19-13-34-47.png)
 >**发散思维:**
 旋转任意向量 都可构建旋转函数,即:**二维旋转则构建二维矩阵(三维则构建三维矩阵) 暴露旋转角度参数** 
 
