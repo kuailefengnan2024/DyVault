@@ -3,6 +3,9 @@
 
 unity使用post process component需要安装Package
 先添加layer 后添加volume
+CubeMap中HDR贴图需要decode 防止移动端无法识别 另外贴图格式需要正确 否则效果失真
+旋转HDR贴图的方法:
+![](d:/BaiduSyncdisk/DyVault/Notes/Shader/images/2025-02-19-12-29-05.png)
 
 
 | **内置变量**                                                                 | **数据类型** | **注释**         |
