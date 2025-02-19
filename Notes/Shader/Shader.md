@@ -1,11 +1,14 @@
 >Tags{"LightMode"="ForwardBase"}
 >确认主光源 防止混乱
 
-unity使用post process component需要安装Package
-先添加layer 后添加volume
-CubeMap中HDR贴图需要decode 防止移动端无法识别 另外贴图格式需要正确 否则效果失真
-旋转HDR贴图的方法:
+>#### CubeMap
+>unity使用post process component需要安装Package(unity6 不用 在相机参数中有)
+>先添加layer 后添加volume
+>CubeMap中HDR贴图需要decode 防止移动端无法识别 另外贴图格式需要正确 否则效果失真/ 法线是Unpack
+>**旋转HDR贴图的方法:**
 ![](d:/BaiduSyncdisk/DyVault/Notes/Shader/images/2025-02-19-12-29-05.png)
+>**发散思维:**
+旋转任意向量 都可构建旋转函数,即:**二维旋转则构建二维矩阵(三维则构建三维矩阵) 暴露旋转角度参数** 
 
 
 | **内置变量**                                                                 | **数据类型** | **注释**         |
