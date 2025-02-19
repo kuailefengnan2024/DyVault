@@ -1,6 +1,8 @@
 >Tags{"LightMode"="ForwardBase"}
 >确认主光源 防止混乱
 
+unity使用post process component需要安装Package
+先添加layer 后添加volume
 
 
 | **内置变量**                                                                 | **数据类型** | **注释**         |
