@@ -1,6 +1,8 @@
 >Tags{"LightMode"="ForwardBase"}
 >确认主光源 防止混乱
 
+
+
 >#### CubeMap
 >unity使用post process component需要安装Package(unity6 不用 在相机参数中有)
 >先添加layer 后添加volume
@@ -9,6 +11,11 @@
 ![](d:/BaiduSyncdisk/DyVault/Notes/Shader/images/2025-02-19-13-34-47.png)
 >**发散思维:**
 旋转任意向量 都可构建旋转函数,即:**二维旋转则构建二维矩阵(三维则构建三维矩阵) 暴露旋转角度参数** 
+
+>unity_SpecCube0是Unity内置变量 默认对应Reflection Probe生成的贴图
+>![](d:/BaiduSyncdisk/DyVault/Notes/Shader/images/2025-02-20-12-02-46.png)
+>两种方式 前者使用Reflection Probe来获得反射 后者则手动选择反射贴图
+**UNITY_SAMPLE_TEXCUBE**是内置宏 功能上和 **texCUBE** 一样 但是不需要手动选择贴图 适用于Probe
 
 
 | **内置变量**                                                                 | **数据类型** | **注释**         |
