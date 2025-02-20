@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <textarea id="markdownInput" rows="10" cols="50" placeholder="复制您的markdown文案到这~"></textarea>
+  <br>
+  <button id="convertBtn">Convert to Table</button>
+
+  <script>
+    document.getElementById('convertBtn').onclick = () => {
+      const markdown = document.getElementById('markdownInput').value;
+      parent.postMessage({ pluginMessage: { type: 'convert', markdown } }, '*');
+    };
+  </script>
+</body>
+</html>
