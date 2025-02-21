@@ -6,9 +6,9 @@
 | **实现复杂度**     | output = Input-Min/Max-Min                 | output = 1/1+e^-x             |
 
 
-![](d:/BaiduSyncdisk/DyVault/Notes/MathBasic/images/2025-01-26-11-35-11.png)
+![](d:/BaiduSyncdisk/DyVault/Notes/MathBasic/images/2025-02-21-14-36-15.png)
 
-
+![](d:/BaiduSyncdisk/DyVault/Notes/MathBasic/images/2025-02-21-14-23-12.png)
 
 
 ---
