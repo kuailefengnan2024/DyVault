@@ -1,4 +1,7 @@
 
+![](d:/BaiduSyncdisk/DyVault/Notes/UE/images/2025-02-21-19-12-04.png)
+
+
 - **`.ush` ≈ Unity中的`.cginc`（复用代码片段）。  
 - **`.usf` ≈ Unity中的`.shader`（主要的Shader逻辑）。  
 - **`.cpp`** 用于UE引擎的底层逻辑，与Unity的Shader逻辑分开，无直接对标。
