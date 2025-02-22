@@ -12,7 +12,10 @@
 >**发散思维:**
 旋转任意向量 都可构建旋转函数,即:**二维旋转则构建二维矩阵(三维则构建三维矩阵) 暴露旋转角度参数** 
 
->unity_SpecCube0是Unity内置变量 默认对应Reflection Probe生成的贴图
+>unity_SpecCube0是Unity内置反射探针 可以.Sample
+>samplerunity_SpecCube0是Unity内置采样器 
+![](d:/BaiduSyncdisk/DyVault/Notes/Shader/images/2025-02-22-23-03-45.png)
+↑不用声明 都是内置的
 >![](d:/BaiduSyncdisk/DyVault/Notes/Shader/images/2025-02-20-12-02-46.png)
 >两种方式 前者使用Reflection Probe来获得反射 后者则手动选择反射贴图
 **UNITY_SAMPLE_TEXCUBE**是内置宏 功能上和 **texCUBE** 一样 但是不需要手动选择贴图 适用于Probe
