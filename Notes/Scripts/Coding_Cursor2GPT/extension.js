@@ -1,16 +1,9 @@
 const vscode = require('vscode');
+const open = require('open'); // 假设 open 包已经正确安装
 
 async function activate(context) {
-    // 动态加载 open 包
-    let open;
-    try {
-        open = await import('open');
-    } catch (error) {
-        vscode.window.showErrorMessage(`Failed to load open package: ${error.message}`);
-        return;
-    }
-
-    let disposable = vscode.commands.registerCommand('coding-cursor2gpt.sendToChatGPT', async () => {
+    // 定义功能函数
+    async function sendToChatGPT() {
         try {
             // 获取当前编辑器
             const editor = vscode.window.activeTextEditor;
@@ -30,18 +23,19 @@ async function activate(context) {
             await vscode.env.clipboard.writeText(contentToClipboard);
 
             // 打开 ChatGPT 网页
-            await open.default('https://chatgpt.com/', {
+            await open('https://chatgpt.com/', {
                 app: { name: 'chrome' },
                 newInstance: true
             });
 
             vscode.window.showInformationMessage('Code copied to clipboard and ChatGPT opened!');
-
         } catch (error) {
             vscode.window.showErrorMessage(`Error: ${error.message}`);
         }
-    });
+    }
 
+    // 注册命令
+    let disposable = vscode.commands.registerCommand('coding-cursor2gpt.sendToChatGPT', sendToChatGPT);
     context.subscriptions.push(disposable);
 }
 
