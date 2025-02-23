@@ -17,13 +17,18 @@ async function activate(context) {
             const code = document.getText();
 
             // 创建组合内容：代码 + 文案
-            const contentToClipboard = `${code}\n\n帮我修复bug 精炼回答`;
+            const contentToClipboard = `${code}\n\n帮我修复bug 你给我的回复不需要包含任何其他内容 只给出修复后的代码,解释应该包含在代码注释中`;
 
             // 复制到剪贴板
             await vscode.env.clipboard.writeText(contentToClipboard);
 
             // 打开 ChatGPT 网页
-            await open('https://chatgpt.com/', {
+            // await open('https://chatgpt.com/', {
+            //     app: { name: 'chrome' },
+            //     newInstance: true
+            // });
+            // 打开 https://grok.com/ 网页
+            await open('https://grok.com/', {
                 app: { name: 'chrome' },
                 newInstance: true
             });

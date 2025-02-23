@@ -6,11 +6,11 @@
 |  GAN（对抗神经网络） |  生成图片            |
 |  Auto-Encoder（自编码器） |  生成            |
 |  Transformer() |  chatgpt            |
-| 原理示意| ![](d:/BaiduSyncdisk/DyVault/Notes/Python/images/2024-10-28-23-52-09.png)|
-|  此图对应上图 一个小圆 |![](d:/BaiduSyncdisk/DyVault/Notes/Python/images/2024-10-28-23-55-48.png)  |
+| 原理示意| ![](d:/BaiduSyncdisk/DyVault/Notes/Others/Coding/images/2024-10-28-23-52-09p.png)|
+|  此图对应上图 一个小圆 |![](d:/BaiduSyncdisk/DyVault/Notes/Others/Coding/images/2024-10-28-23-55-48p.png)  |
 
 anaconda就是管理环境的工具
-![](d:/BaiduSyncdisk/DyVault/Notes/Python/images/2024-10-28-23-44-05.png)
+![](d:/BaiduSyncdisk/DyVault/Notes/Others/Coding/images/2024-10-28-23-44-05p.png)
 
 conda和pip是并列概念 都是包的安装工具
 
@@ -18,7 +18,7 @@ conda和pip是并列概念 都是包的安装工具
 **收敛**是判断算法是否达到最佳状态的标准，确保训练过程的有效性。
 **正态分布**在初始化、引入随机性和假设检验等方面发挥着重要作用，帮助模型更好地学习和泛化。
 
-![alt text](./images/image-3.png)
+![](d:/BaiduSyncdisk/DyVault/Notes/Others/Coding/images/image-3p.png)
 魔术方法===私有属性
 示例-add- 来赋予Menu可加性👇
 ```
@@ -68,12 +68,12 @@ print()会自动调用--str--属性
 实例 海淀麦当劳1号店
 
 
-![alt text](./images/image-2.png)
+![](d:/BaiduSyncdisk/DyVault/Notes/Others/Coding/images/image-2p.png)
 
 >pip：Python 的包管理工具
 conda: 包管理工具 但不限于python
 
->![alt text](./images/image.png)
+![](d:/BaiduSyncdisk/DyVault/Notes/Others/Coding/images/imagep.png)
 *不同的pytorch版本*
 
 类是对象的蓝图，对象是类的实例

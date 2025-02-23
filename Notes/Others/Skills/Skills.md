@@ -117,3 +117,8 @@ md可以选择边，然后右键对称联动板片，也可以选择边右键取
 
 拓扑分面
 5＞3＞1＞2＞4
+
+Cursor安装插件命令
+cursor --install-extension D:\BaiduSyncdisk\DyVault\Notes\Scripts\Coding_Cursor2GPT\coding-cursor2gpt-0.0.1.vsix
+Vscode安装插件命令
+code --install-extension D:\BaiduSyncdisk\DyVault\Notes\Scripts\Coding_Cursor2GPT\coding-cursor2gpt-0.0.1.vsix

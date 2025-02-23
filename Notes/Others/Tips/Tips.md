@@ -84,10 +84,10 @@ AI韩语占据两成业余精力
 
 #### 画面宏伟
 ##### 1.低角度，小焦距，真实比例
-![alt text](./images/image.png)
-![alt text](./images/image-1.png)
+![](d:/BaiduSyncdisk/DyVault/Notes/Others/Tips/images/imaget.png)
+![](d:/BaiduSyncdisk/DyVault/Notes/Others/Tips/images/image-1t.png)
 ##### 2.房屋，人物等对比，材质对比
-![alt text](./images/image-2.png)![alt text](./images/image-3.png)
+![](d:/BaiduSyncdisk/DyVault/Notes/Others/Tips/images/image-2t.png)!![](d:/BaiduSyncdisk/DyVault/Notes/Others/Tips/images/image-3t.png)
 ##### 3.云彩，空气雾
 
 
