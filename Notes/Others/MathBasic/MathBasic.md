@@ -6,9 +6,9 @@
 | **实现复杂度**     | output = Input-Min/Max-Min                 | output = 1/1+e^-x             |
 
 
-![](d:/BaiduSyncdisk/DyVault/Notes/MathBasic/images/2025-02-21-14-36-15.png)
+![](d:/BaiduSyncdisk/DyVault/Notes/Others/MathBasic/images/2025-02-21-14-36-15.png)
 
-![](d:/BaiduSyncdisk/DyVault/Notes/MathBasic/images/2025-02-21-14-23-12.png)
+![](d:/BaiduSyncdisk/DyVault/Notes/Others/MathBasic/images/2025-02-21-14-23-12.png)
 
 
 ---
@@ -129,29 +129,29 @@
 - 原点保持不动
 
 >使用微积分推导圆面积公式
-![](d:/BaiduSyncdisk/DyVault/Notes/MathBasic/images/2024-12-29-22-26-12.png)
+![](d:/BaiduSyncdisk/DyVault/Notes/Others/MathBasic/images/2024-12-29-22-26-12.png)
 本质上将复杂问题转换为 **寻找积分函数A(x)面积问题**
 ##### 启发:不要硬算,升维寻找捷径更加高效,过于复杂往往意味着错误
 
 
-![](d:/BaiduSyncdisk/DyVault/Notes/MathBasic/images/2024-11-16-22-38-37.png)
-![](d:/BaiduSyncdisk/DyVault/Notes/MathBasic/images/2024-11-16-22-38-25.png)
+![](d:/BaiduSyncdisk/DyVault/Notes/Others/MathBasic/images/2024-11-16-22-38-37.png)
+![](d:/BaiduSyncdisk/DyVault/Notes/Others/MathBasic/images/2024-11-16-22-38-25.png)
 
 >#### 齐次坐标
 假设一个二维向量(x,y)
 实现斜切:
-![](d:/BaiduSyncdisk/DyVault/Notes/MathBasic/images/2024-10-27-20-04-32.png)
+![](d:/BaiduSyncdisk/DyVault/Notes/Others/MathBasic/images/2024-10-27-20-04-32.png)
 实现旋转:
-![](d:/BaiduSyncdisk/DyVault/Notes/MathBasic/images/2024-10-27-20-05-00.png)
+![](d:/BaiduSyncdisk/DyVault/Notes/Others/MathBasic/images/2024-10-27-20-05-00.png)
 综合应用:
-![](d:/BaiduSyncdisk/DyVault/Notes/MathBasic/images/2024-10-27-20-05-41.png)
+![](d:/BaiduSyncdisk/DyVault/Notes/Others/MathBasic/images/2024-10-27-20-05-41.png)
 但无法实现平移,所以引入第三个分量(x,y,1),即齐次坐标,方便计算机高效处理多个点的操作
 如果是(x,y,0)则是固定缩放,常被应用在**光和法线**上
 如果是(x,y,1)则可将移动也可以用矩阵相乘来实现,来**高效一致**的处理所有变换
 如果是(x,y,w)则得到(x/w,y/w,1),常被应用在**透视投影**
-![](d:/BaiduSyncdisk/DyVault/Notes/MathBasic/images/2024-10-27-20-20-08.png)
-![](d:/BaiduSyncdisk/DyVault/Notes/MathBasic/images/2024-10-27-20-09-29.png)
-![](d:/BaiduSyncdisk/DyVault/Notes/MathBasic/images/2024-10-27-20-23-44.png)
+![](d:/BaiduSyncdisk/DyVault/Notes/Others/MathBasic/images/2024-10-27-20-20-08.png)
+![](d:/BaiduSyncdisk/DyVault/Notes/Others/MathBasic/images/2024-10-27-20-09-29.png)
+![](d:/BaiduSyncdisk/DyVault/Notes/Others/MathBasic/images/2024-10-27-20-23-44.png)
 
 
 >#### 最大化对数似然和最小化损失函数的区别
@@ -169,24 +169,24 @@
 >通常指的是**模型权重（Weights）/ 偏置（Biases）**,数值类型为浮点数
 
 >#### 最大化数据对数似然
->![](d:/BaiduSyncdisk/DyVault/Notes/MathBasic/images/2024-10-27-17-23-21.png)
-![](d:/BaiduSyncdisk/DyVault/Notes/MathBasic/images/2024-10-27-17-23-46.png)
+>![](d:/BaiduSyncdisk/DyVault/Notes/Others/MathBasic/images/2024-10-27-17-23-21.png)
+![](d:/BaiduSyncdisk/DyVault/Notes/Others/MathBasic/images/2024-10-27-17-23-46.png)
 通过最大化对数似然，模型参数能够被调整，使得模型生成的数据与观察到的数据更一致
 
 >#### 概率密度函数
 >N() 符号通常表示高斯分布（或正态分布）的**概率密度函数**
-![](d:/BaiduSyncdisk/DyVault/Notes/MathBasic/images/2024-10-27-17-16-11.png)
-![](d:/BaiduSyncdisk/DyVault/Notes/MathBasic/images/2024-10-27-17-16-28.png)
+![](d:/BaiduSyncdisk/DyVault/Notes/Others/MathBasic/images/2024-10-27-17-16-11.png)
+![](d:/BaiduSyncdisk/DyVault/Notes/Others/MathBasic/images/2024-10-27-17-16-28.png)
 方差越大 钟形越扁
 以正态分布为例，其概率密度函数的公式为：
-![](d:/BaiduSyncdisk/DyVault/Notes/MathBasic/images/2024-10-27-17-20-31.png)
+![](d:/BaiduSyncdisk/DyVault/Notes/Others/MathBasic/images/2024-10-27-17-20-31.png)
 
 伪造身份
-![](d:/BaiduSyncdisk/DyVault/Notes/MathBasic/images/2024-10-27-16-45-30.png)
+![](d:/BaiduSyncdisk/DyVault/Notes/Others/MathBasic/images/2024-10-27-16-45-30.png)
 显然不合理,所以需要联合分布Joint Distribution
-![](d:/BaiduSyncdisk/DyVault/Notes/MathBasic/images/2024-10-27-16-46-25.png)
+![](d:/BaiduSyncdisk/DyVault/Notes/Others/MathBasic/images/2024-10-27-16-46-25.png)
 
-![](d:/BaiduSyncdisk/DyVault/Notes/MathBasic/images/2024-10-27-16-50-46.png)
+![](d:/BaiduSyncdisk/DyVault/Notes/Others/MathBasic/images/2024-10-27-16-50-46.png)
 对y积分,即消去y的影响
 
 
@@ -218,12 +218,12 @@
 
 
 >#### 梯度(vector)
->![](./images/2024-10-11-13-26-28.png)
+>![](d:/BaiduSyncdisk/DyVault/Notes/Others/MathBasic/images/2024-10-11-13-26-28.png)
 梯度指向函数上升最快的方向,大小为速率,常用于**损失函数**的优化
 >##### 损失函数的优化：
 >在训练模型时，目标是最小化损失函数 L(θ)。我们需要计算损失函数相对于模型参数 θ 的梯度 ∇()
 ∇L(θ)，然后使用梯度下降法更新参数
-![](./images/2024-10-11-13-30-41.png)
+![](d:/BaiduSyncdisk/DyVault/Notes/Others/MathBasic/images/2024-10-11-13-30-41.png)
 *α 是学习率*
 
 | 损失函数类型         | 公式                                   | 应用场景               |
@@ -240,7 +240,7 @@
 
 >#### 特征值和特征向量
 >**特征向量（Eigenvector）**：对于给定的方阵 A，如果存在非零向量 v 和标量 λ，使得以下等式成立：
-![](./images/2024-10-11-13-12-06.png)
+![](d:/BaiduSyncdisk/DyVault/Notes/Others/MathBasic/images/2024-10-11-13-12-06.png)
 则称 v 为矩阵 A 的特征向量，λ 为对应的特征值。(个人理解:将矩阵降维成标量和向量)
 特征值（Eigenvalue）：是与特征向量相关联的标量，表示特征向量在变换下的伸缩因子。
 
@@ -248,21 +248,21 @@
 
 >#### 布朗运动
 >是微小粒子或者颗粒在流体中做的无规则运动。一种正态分布的独立增量连续随机过程。
-![](./images/2024-10-10-19-37-45.png)
+![](d:/BaiduSyncdisk/DyVault/Notes/Others/MathBasic/images/2024-10-10-19-37-45.png)
 
 
 >##### 扩散过程原理
 >随机微分方程 SDE
-![](./images/2024-10-10-19-16-44.png)
+![](d:/BaiduSyncdisk/DyVault/Notes/Others/MathBasic/images/2024-10-10-19-16-44.png)
 >##### 反向过程原理
 >常微分方程
-![](./images/2024-10-10-19-18-33.png)
+![](d:/BaiduSyncdisk/DyVault/Notes/Others/MathBasic/images/2024-10-10-19-18-33.png)
 >##### 训练目标原理
 >损失函数
-![](./images/2024-10-10-19-19-29.png)
+![](d:/BaiduSyncdisk/DyVault/Notes/Others/MathBasic/images/2024-10-10-19-19-29.png)
 
 >贝叶斯定理
-![](./images/2024-10-10-14-06-15.png)
+![](d:/BaiduSyncdisk/DyVault/Notes/Others/MathBasic/images/2024-10-10-14-06-15.png)
 >1. **\( P(A|B) \)**：在测试结果为阳性的情况下，某人患有疾病的概率。（后验概率）。
 >2. **\( P(B|A) \)**：在某人确实患有疾病的情况下，测试结果为阳性的概率。（似然性）。
 >3. **\( P(A) \)**：某人患有该疾病的总体概率。先验概率。
@@ -270,8 +270,8 @@
 
 >##### 边缘化Marginalize
 >对不感兴趣的变量进行积分（在连续情况下）或求和（在离散情况下），得到感兴趣变量的边际分布
-![alt text](./images/image-10.png)
-![alt text](./images/image-11.png)
+![](d:/BaiduSyncdisk/DyVault/Notes/Others/MathBasic/images/2024-10-10-14-06-15.png)
+![](d:/BaiduSyncdisk/DyVault/Notes/Others/MathBasic/images/2024-10-10-14-06-15.png)
 
 >##### KL散度
 >![alt text](./images/image-8.png)
