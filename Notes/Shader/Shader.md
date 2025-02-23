@@ -1,7 +1,14 @@
 >Tags{"LightMode"="ForwardBase"}
 >确认主光源 防止混乱
 
-
+>*Unity/UE/用途*
+**Tags** == **Actor Tags**:用于标记和标识对象，便于脚本快速查找和逻辑判断  
+**Layers** == **Collision Channels** / **Visibility Channels**:控制对象渲染、碰撞和物理交互，分组优化性能      
+**GameObjects** == **Actors**:场景中可操作的实体，包含组件或组件集合         
+**Components** == **Components**:附加到对象上的功能模块（如渲染、物理、脚本）    
+**Prefabs** == **Blueprints (Templates)**:可重用对象模板，方便快速实例化和管理           
+**Scenes** == **Levels** == **Maps**:存储场景或关卡的容器，包含所有对象和设置       
+ 
 
 >#### CubeMap
 >unity使用post process component需要安装Package(unity6 不用 在相机参数中有)
@@ -13,6 +20,8 @@
 旋转任意向量 都可构建旋转函数,即:**二维旋转则构建二维矩阵(三维则构建三维矩阵) 暴露旋转角度参数** 
 
 >unity_SpecCube0是Unity内置反射探针 可以.Sample
+探针可以获得Cubemap 本质上shader还是用的CubeMap或者TextureMap
+2d的hdr纹理贴图如果使用mipmap可能产生接缝 无伤大雅
 >samplerunity_SpecCube0是Unity内置采样器 
 ![](d:/BaiduSyncdisk/DyVault/Notes/Shader/images/2025-02-22-23-03-45.png)
 ↑不用声明 都是内置的
