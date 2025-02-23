@@ -239,7 +239,6 @@ stencil test 的值不是展示的颜色值 而是比较值
 
 --- 
 
-这样是否符合你的要求？如果需要更具体的代码或调整，随时告知！
 
 ![](d:/BaiduSyncdisk/DyVault/Notes/Shader/images/2025-01-13-12-59-48.png)
 ![](d:/BaiduSyncdisk/DyVault/Notes/Shader/images/2025-01-13-13-45-21.png)
