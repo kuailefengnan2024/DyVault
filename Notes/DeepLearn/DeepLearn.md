@@ -1,7 +1,8 @@
 __xxx__ 是魔术方法 本质就是函数 为了和普通函数区分开 所以加上了双下划线
 
 Pytorch
-1.使用anaconda prompt 输入 jupyter notebook 打开jupyter notebook
+1.使用anaconda prompt 输入 conda activate pytorch 打开pytorch环境
+2.然后anaconda prompt 输入 jupyter notebook 打开jupyter notebook
 
 
 |  类型        |  描述                   |
