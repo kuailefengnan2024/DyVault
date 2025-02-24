@@ -1,7 +1,9 @@
 
+from PIL import Image
+import os
 
 
-    class MyDataDataset:  # 定义自定义数据集类
+class MyDataDataset:  # 定义自定义数据集类
     def __init__(self, root_dir, label_dir):  # 初始化，设置根目录和标签目录
         self.root_dir = root_dir  # 存储根目录路径
         self.label_dir = label_dir  # 存储标签目录路径
