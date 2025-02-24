@@ -1,42 +1,36 @@
 {
-    "manifest_version": 3,
-    "name": "Grok Text Enhancer",
-    "version": "1.0",
-    "description": "Enhance selected text with Grok",
-    "permissions": [
-      "activeTab",
-      "clipboardWrite",
-      "storage",
-      "scripting",
-      "tabs"
-    ],
-    "background": {
-      "service_worker": "background.js"
-    },
-    "content_scripts": [
-      {
-        "matches": ["<all_urls>", "https://grok.com/*"],
-        "js": ["content.js"],
-        "run_at": "document_end",
-        "all_frames": true
-      }
-    ],
-    "commands": {
-      "enhance-text": {
-        "suggested_key": {
-          "default": "Ctrl+I",
-          "mac": "Command+I"
-        },
-        "description": "Send selected text to Grok"
-      }
-    },
-    "action": {
-      "default_popup": "popup.html"
-    },
-    "web_accessible_resources": [
-      {
-        "resources": ["content.js"],
-        "matches": ["<all_urls>", "https://grok.com/*"]
-      }
-    ]
+  "manifest_version": 3,
+  "name": "Grok Text Enhancer",
+  "version": "1.0.0",  
+  "description": "Enhance selected text with Grok and copy to clipboard",
+  "permissions": [
+    "activeTab",
+    "clipboardWrite",
+    "storage",
+    "scripting",
+    "tabs"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>", "https://grok.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_end",
+      "all_frames": true
+    }
+  ],
+  "commands": {
+    "enhance-text": {
+      "suggested_key": {
+        "default": "Ctrl+I",
+        "mac": "Command+I"
+      },
+      "description": "Send selected text to clipboard and open Grok"
+    }
+  },
+  "action": {
+    "default_popup": "popup.html"
   }
+}
