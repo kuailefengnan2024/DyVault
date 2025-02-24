@@ -6,19 +6,15 @@
   "permissions": [
     "activeTab",
     "clipboardWrite",
-    "tabs",
-    "storage"
+    "tabs"
   ],
-  "background": {
-    "service_worker": "background.js"
-  },
+  "host_permissions": [
+    "<all_urls>"
+  ],
   "content_scripts": [
     {
       "matches": ["<all_urls>"],
       "js": ["content.js"]
     }
-  ],
-  "action": {
-    "default_popup": "popup.html"
-  }
+  ]
 }

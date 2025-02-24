@@ -1,19 +1,17 @@
 {
   "manifest_version": 3,
   "name": "Grok Text Enhancer",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Enhance selected text with one click",
   "permissions": [
     "activeTab",
     "clipboardWrite",
     "tabs",
-    "storage",
-    "contextMenus",
-    "scripting" 
+    "storage"
   ],
-  "background": {
-    "service_worker": "background.js"
-  },
+  "host_permissions": [
+    "<all_urls>"
+  ],
   "content_scripts": [
     {
       "matches": ["<all_urls>"],
