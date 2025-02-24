@@ -1,5 +1,46 @@
+
+---
+#### 魔术方法
+
+##### __getitem__案例
+```
+import os
+from PIL import Image
+
+class SimpleImageDataset:
+    def __init__(self, data_dir, label_dir):  # 初始化，接收数据目录和标签目录
+        self.data_dir = data_dir  # 设置数据目录路径
+        self.label_dir = label_dir  # 设置标签目录路径
+        self.image_files = os.listdir(data_dir)  # 列出目录下所有图像文件
+
+    def __getitem__(self, idx):  # 定义 __getitem__，根据索引返回数据
+        img_name = self.image_files[idx]  # 根据索引获取图像文件名
+        img_path = os.path.join(self.data_dir, img_name)  # 组合完整图像路径
+        image = Image.open(img_path)  # 打开图像
+        label = os.path.join(self.label_dir, img_name.replace(".jpg", ".txt"))  # 假设标签是同名 .txt 文件
+        return image, label  # 返回图像和对应标签
+
+# 使用示例
+dataset = SimpleImageDataset("/path/to/images", "/path/to/labels")
+image, label = dataset[0]  # 通过索引 0 获取第一个图像和标签
+```
+
+```
+class NumberSequence:
+    def __init__(self, numbers):  # 初始化，接收一个数字列表
+        self.numbers = numbers  # 存储数字列表作为属性
+
+    def __getitem__(self, idx):  # 定义 __getitem__，根据索引返回数字
+        return self.numbers[idx]  # 返回列表中对应索引的数字
+
+# 使用示例
+sequence = NumberSequence([10, 20, 30, 40, 50])
+print(sequence[2])  # 输出: 30
+print(sequence[0])  # 输出: 10
+```
+
+
 __xxx__ 是魔术方法 本质就是函数 为了和普通函数区分开 所以加上了双下划线
-Pytorch常用魔术方法
 
 | 特殊方法       | 用途                                      |
 |----------------|-------------------------------------------|
@@ -13,7 +54,43 @@ Pytorch常用魔术方法
 | `__getattr__`  | 控制属性访问行为，用于动态返回属性           |
 | `__eq__`       | 定义对象相等性比较，用于 `==` 操作          |
 | `__add__`      | 定义对象相加行为，用于 `+` 操作（如张量操作） |
-| `__torch_function__` | 自定义张量操作行为，扩展 PyTorch 功能       |
+| `__torch_function__` | 自定义张量操作行为，扩展 PyTorch 功能       |  
+  
+
+
+
+##### __init__定义案例
+
+```
+class SimpleImageDataset: #类本身
+    def __init__(self, data_dir, label_dir):  # 定义 __init__，接收数据目录和标签目录作为参数
+        self.data_dir = data_dir  # 设置数据目录路径作为实例属性
+        self.label_dir = label_dir  # 设置标签目录路径作为实例属性
+        self.image_files = os.listdir(data_dir)  # 列出数据目录下的所有图像文件，存储为列表
+
+使用示例
+dataset = SimpleImageDataset("/path/to/images", "/path/to/labels") #实例化一个具体的类
+```
+
+```
+import torch
+import torch.nn as nn
+
+class SimpleNN: #类本身
+    def __init__(self, input_size=10, hidden_size=20, output_size=2):  # 定义 __init__，接收网络层大小作为参数
+        self.layer1 = nn.Linear(input_size, hidden_size)  # 初始化第一层线性层
+        self.layer2 = nn.Linear(hidden_size, output_size)  # 初始化第二层线性层
+        self.activation = nn.ReLU()  # 初始化激活函数
+
+ 使用示例
+model = SimpleNN(input_size=10, hidden_size=20, output_size=2) #实例化一个具体的类
+```
+
+**def -init-(self, ...) self 总是第一个参数，表示当前实例(mydataset) 将类的实例（对象）和初始化时的参数关联起来，为新创建的类实例设置初始状态或属性**
+
+---
+
+
 
 Pytorch
 1.使用anaconda prompt 输入 conda activate pytorch 打开pytorch环境
