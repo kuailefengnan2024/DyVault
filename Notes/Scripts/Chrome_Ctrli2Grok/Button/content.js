@@ -47,20 +47,25 @@ function showButton(selectedText) {
         const combinedText = `${selectedText}\n\n${suffixText}`;
 
         navigator.clipboard.writeText(combinedText)
-          .then(() => {
-            console.log('文本已成功复制到剪贴板:', combinedText);
-            chrome.runtime.sendMessage({ action: 'open-url' }, () => {
-              if (chrome.runtime.lastError) {
-                console.error('打开新标签页消息失败:', chrome.runtime.lastError.message);
-              } else {
-                console.log('已发送打开新标签页请求');
-              }
-            });
-            removeButton();
-          })
-          .catch((err) => {
-            console.error('复制到剪贴板失败:', err);
+        .then(() => {
+          console.log('文本已成功复制到剪贴板:', combinedText);
+          chrome.runtime.sendMessage({ action: 'open-url' }, () => {
+            if (chrome.runtime.lastError) {
+              console.error('打开新标签页消息失败:', chrome.runtime.lastError.message);
+            } else {
+              console.log('已发送打开新标签页请求');
+            }
           });
+      
+          // 延迟移除按钮
+          setTimeout(() => {
+            removeButton();
+          }, 500);  // 延迟500毫秒
+        })
+        .catch((err) => {
+          console.error('复制到剪贴板失败:', err);
+        });
+      
       });
     });
     document.body.appendChild(button);
