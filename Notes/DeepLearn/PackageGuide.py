@@ -10,6 +10,10 @@ from sklearn.model_selection import train_test_split # 提供数据拆分、评�
 from sklearn.metrics import accuracy_score
 import cv2 # 处理图像和视频，支持实时计算机视觉任务和复杂变换。
 
+
+
+
+
 # === NumPy 示例 ===
 print("=== NumPy 示例 ===")
 # 创建数组
@@ -28,6 +32,10 @@ print("数组切片:", array[1:4])  # 取索引1到3的元素
 print("数组形状:", matrix.shape)  # 获取数组形状
 print("数组重塑:\n", array.reshape(5, 1))  # 改变形状为5x1
 print("随机数组:\n", rng)
+
+
+
+
 
 # === Torchvision 示例 ===
 print("\n=== Torchvision 示例 ===")
@@ -50,6 +58,9 @@ print("标签:", labels)
 model = torchvision.models.resnet18(pretrained=True)
 print("ResNet18 模型结构:", model)
 
+
+
+
 # === Matplotlib 示例 ===
 print("\n=== Matplotlib 示例 ===")
 # 绘制简单折线图
@@ -68,6 +79,10 @@ plt.figure()  # 创建新图形
 plt.imshow(images[0].permute(1, 2, 0).numpy())  # 显示第一张 MNIST 图像（需调整张量维度）
 plt.title(f"标签: {labels[0].item()}")
 # plt.show()  # 取消注释以显示图形
+
+
+
+
 
 # === Pandas 示例 ===
 print("\n=== Pandas 示例 ===")
@@ -101,6 +116,10 @@ print("测试集:\n", X_test)
 y_pred = [0, 1, 0, 1]  # 假设预测结果
 acc = accuracy_score(y_test, y_pred[:len(y_test)])  # 计算准确率
 print("准确率:", acc)
+
+
+
+
 
 # === OpenCV 示例 ===
 print("\n=== OpenCV 示例 ===")
