@@ -1,0 +1,8 @@
+{
+    "name": "文本水平倾斜工具（蒙版模拟）",
+    "id": "text-skew-mask-tool-123456",
+    "api": "1.0.0",
+    "main": "code.js",
+    "ui": "ui.html",
+    "editorType": ["figma"]
+  }
