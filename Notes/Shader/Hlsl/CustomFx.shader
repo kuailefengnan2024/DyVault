@@ -49,3 +49,12 @@ float3 DecodeDy(float4 color_cubemap, float4 hdr_params)
 {
     return color_cubemap.rgb * pow(2.0, hdr_params.x);
 }                
+
+
+// 函数:将任意数值float映射到a到b之间
+float fit(float value, float a, float b)
+{
+    return a + (b - a) * value;
+}
+
+
