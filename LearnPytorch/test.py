@@ -11,7 +11,7 @@ import numpy as np
 import cv2
 
 # NumPy 示例
-array = np.array([[1, 2], [3, 4]])
+array2 = np.array([[1, 2], [3, 4]])
 print("NumPy 数组：\n", array)
 print("数组转置：\n", array.T)
 
