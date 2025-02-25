@@ -42,3 +42,10 @@ float2 ReflectDirToUV(float3 reflect_dir)
     
     return uv;
 }
+
+
+// 解码 HDR 立方体贴图颜色的函数 假设_CubeMap_HDR.x存储曝光指数 也就是pow编码而非rgbm编码   平面 HDR和cubemap都可以处理
+float3 DecodeDy(float4 color_cubemap, float4 hdr_params)
+{
+    return color_cubemap.rgb * pow(2.0, hdr_params.x);
+}                

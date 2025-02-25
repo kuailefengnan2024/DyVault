@@ -1,6 +1,22 @@
 >Tags{"LightMode"="ForwardBase"}
 >确认主光源 防止混乱
 
+---
+#### 线性/伽马 HDR相关
+**DecodeHDR**：像从压缩包（ZIP）解压文件，得到原始内容（HDR 颜色）。**解码压缩纹理 → 线性 HDR，无范围限制**
+**ACES_Tonemapping**：像把一本厚书（HDR）缩写成摘要（LDR），保留关键信息 **映射 HDR → 线性 LDR，压缩到 [0, 1]**
+- 直接在伽马空间应用 ACES会出错 导致偏暗 
+- 一般的return color 都是线性的 现代管线urp和ue会自动进行伽马校正
+
+```
+float3 final_color = env_color * ao * _Tint.rgb * _Tint.rgb * _Expose; // 计算最终颜色，应用AO、颜色调整和曝光度
+float3 final_color_linear = pow(final_color, 2.2); // 伽马空间 >> 线性空间(HDR) , 方便后续计算
+final_color = ACES_Tonemapping(final_color_linear); // 将线性颜色应用ACES色调映射 HDR >> LDR，范围限制在 [0, 1],显示器上看起来自然
+float3 final_color_gamma = pow(final_color, 1.0 / 2.2); // 线性空间 >> 伽马空间 , 显示器非线性 所以不能直接输出线性颜色 应用伽马校正 
+```
+
+---
+
 >*Unity/UE/用途*
 **Tags** == **Actor Tags**:用于标记和标识对象，便于脚本快速查找和逻辑判断  
 **Layers** == **Collision Channels** / **Visibility Channels**:控制对象渲染、碰撞和物理交互，分组优化性能      
