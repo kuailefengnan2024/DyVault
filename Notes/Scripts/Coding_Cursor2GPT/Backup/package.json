@@ -1,0 +1,36 @@
+{
+  "name": "coding-cursor2gpt",
+  "displayName": "Code to ChatGPT",
+  "description": "Send code to ChatGPT for bug fixing",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": ">=1.60.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "main": "./extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "coding-cursor2gpt.sendToChatGPT",
+        "title": ">>GPT"
+      }
+    ],
+    "menus": {
+      "editor/title": [
+        {
+          "command": "coding-cursor2gpt.sendToChatGPT",
+          "group": "navigation",
+          "when": "editorTextFocus"
+        }
+      ]
+    }
+  },
+  "dependencies": {
+    "open": "^8.4.0"
+  }
+}
