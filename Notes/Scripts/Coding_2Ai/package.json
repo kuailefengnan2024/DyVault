@@ -1,0 +1,11 @@
+{
+  "name": "cursor-ai-plugin",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "@raycast/api": "^1.0.0"
+  }
+}

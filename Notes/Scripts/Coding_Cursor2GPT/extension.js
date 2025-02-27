@@ -1,42 +1,45 @@
 const vscode = require('vscode');
-const open = require('open');
+const open = require('open'); // 假设 open 包已经正确安装
 
 async function activate(context) {
+    // 定义功能函数
     async function sendToChatGPT() {
         try {
+            // 获取当前编辑器
             const editor = vscode.window.activeTextEditor;
             if (!editor) {
                 vscode.window.showErrorMessage('No active editor found!');
                 return;
             }
 
-            // 获取选中的代码，如果没有选中则返回空字符串
-            const selection = editor.selection;
-            const code = editor.document.getText(selection);
+            // 获取全部代码
+            const document = editor.document;
+            const code = document.getText();
 
-            if (!code) {
-                vscode.window.showWarningMessage('Please select some code first!');
-                return;
-            }
-
-            // 创建组合内容：选中的代码 + 修改后的文案
-            const contentToClipboard = `${code}\n\n帮我添加中文注释助我理解代码 如果有bug 帮我修复bug并只回复给我完整代码内容`;
+            // 创建组合内容：代码 + 文案
+            const contentToClipboard = `${code}\n\n帮我修复bug 你给我的回复不需要包含任何其他内容 只给出修复后的代码,解释应该包含在代码注释中`;
 
             // 复制到剪贴板
             await vscode.env.clipboard.writeText(contentToClipboard);
 
+            // 打开 ChatGPT 网页
+            // await open('https://chatgpt.com/', {
+            //     app: { name: 'chrome' },
+            //     newInstance: true
+            // });
             // 打开 https://grok.com/ 网页
             await open('https://grok.com/', {
                 app: { name: 'chrome' },
                 newInstance: true
             });
 
-            vscode.window.showInformationMessage('Selected code copied to clipboard and ChatGPT opened!');
+            vscode.window.showInformationMessage('Code copied to clipboard and ChatGPT opened!');
         } catch (error) {
             vscode.window.showErrorMessage(`Error: ${error.message}`);
         }
     }
 
+    // 注册命令
     let disposable = vscode.commands.registerCommand('coding-cursor2gpt.sendToChatGPT', sendToChatGPT);
     context.subscriptions.push(disposable);
 }
