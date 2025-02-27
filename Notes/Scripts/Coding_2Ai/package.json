@@ -2,8 +2,27 @@
   "name": "cursor-ai-plugin",
   "version": "1.0.0",
   "main": "index.js",
-  "scripts": {
-    "start": "node index.js"
+  "engines": {
+    "vscode": "^1.70.0"
+  },
+  "activationEvents": [
+    "*",
+    "onStartupFinished"
+  ],
+  "contributes": {
+    "commands": [
+      {
+        "command": "cursor-ai-plugin.openChatGPT",
+        "title": "Open ChatGPT with Code"
+      }
+    ],
+    "keybindings": [
+      {
+        "command": "cursor-ai-plugin.openChatGPT",
+        "key": "ctrl+shift+g",
+        "when": "editorTextFocus"
+      }
+    ]
   },
   "dependencies": {
     "@raycast/api": "^1.0.0"

@@ -1,5 +1,14 @@
 console.log('content.js 已加载');
 
+// 预定义后缀选项
+const suffixOptions = {
+  "optimize-tone": "上述是我要给需求方的回复内容 帮我优化下语气 要自然真诚",
+  "translate": "帮我翻译上述文案为中文,如果上述文案是中文则翻译为英文",
+  "summarize": "帮我解释重点概念 精确提炼上述文案的内容,必要可以打形象的比喻 不要说废话",
+  "refine-work": "上述文案是工作文档中的内容,帮我优化话术",
+  "none": ""
+};
+
 // 移除按钮
 function removeButton() {
   const existingButton = document.querySelector('#grok-enhance-btn');
@@ -34,27 +43,59 @@ function showButton(selectedText) {
   button.addEventListener('mouseenter', function() {
     console.log('鼠标进入按钮区域，选中文本:', selectedText);
 
-    // 获取用户保存的设置
     chrome.storage.sync.get({
-      customSuffix: '上述是我要给需求方的回复内容 帮我优化下语气 要自然真诚',
+      selectedSuffix: 'optimize-tone', // 默认选项为 "优化语气"
       targetUrl: 'https://grok.com'
     }, function(data) {
-      const appendedText = selectedText + '\n\n' + data.customSuffix;
+      const suffixKey = data.selectedSuffix || 'optimize-tone';
+      const suffix = suffixOptions[suffixKey];
+      console.log('当前选择的选项:', suffixKey, '后缀:', suffix);
 
-      const textArea = document.createElement('textarea');
-      textArea.value = appendedText;
-      document.body.appendChild(textArea);
-      textArea.select();
-      document.execCommand('copy');
-      document.body.removeChild(textArea);
-      console.log('文本已成功复制到剪贴板:', appendedText);
+      const appendedText = selectedText + (suffix ? '\n\n' + suffix : '');
+      console.log('准备复制到剪贴板的文本:', appendedText);
 
-      window.open(data.targetUrl, '_blank');
-      removeButton();
+      if (!appendedText.trim()) {
+        console.error('appendedText 为空，无法复制');
+        return;
+      }
+
+      // 优先使用 navigator.clipboard API
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(appendedText)
+          .then(() => {
+            console.log('文本已通过 navigator.clipboard 复制到剪贴板:', appendedText);
+            window.open(data.targetUrl, '_blank');
+            removeButton();
+          })
+          .catch(err => {
+            console.error('navigator.clipboard 复制失败:', err);
+            fallbackCopy(appendedText, data.targetUrl); // 回退方案
+          });
+      } else {
+        // 回退到 document.execCommand
+        fallbackCopy(appendedText, data.targetUrl);
+      }
     });
   });
 
   document.body.appendChild(button);
+}
+
+// 回退复制方案
+function fallbackCopy(text, targetUrl) {
+  const textArea = document.createElement('textarea');
+  textArea.value = text;
+  document.body.appendChild(textArea);
+  textArea.select();
+  try {
+    document.execCommand('copy');
+    console.log('文本已通过 execCommand 复制到剪贴板:', text);
+    window.open(targetUrl, '_blank');
+    removeButton();
+  } catch (err) {
+    console.error('execCommand 复制失败:', err);
+  }
+  document.body.removeChild(textArea);
 }
 
 document.addEventListener('mouseup', function(e) {

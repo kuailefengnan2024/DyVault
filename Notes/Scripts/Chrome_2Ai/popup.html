@@ -13,11 +13,6 @@
       display: block;
       margin: 10px 0 5px;
     }
-    textarea {
-      width: 100%;
-      height: 60px;
-      margin-bottom: 10px;
-    }
     select {
       width: 100%;
       padding: 5px;
@@ -37,8 +32,14 @@
   </style>
 </head>
 <body>
-  <label for="suffixText">自定义后缀:</label>
-  <textarea id="suffixText" placeholder="在这里输入您的自定义后缀"></textarea>
+  <label for="suffixSelect">后缀选项:</label>
+  <select id="suffixSelect">
+    <option value="optimize-tone">优化语气</option>
+    <option value="translate">中英互译</option>
+    <option value="summarize">解释提炼</option>
+    <option value="refine-work">优化话术</option>
+    <option value="none">无后缀</option>
+  </select>
   
   <label for="targetUrl">目标网站:</label>
   <select id="targetUrl">

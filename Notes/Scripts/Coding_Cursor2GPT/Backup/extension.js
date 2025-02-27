@@ -22,7 +22,7 @@ async function activate(context) {
             // 复制到剪贴板
             await vscode.env.clipboard.writeText(contentToClipboard);
 
-            // 打开 ChatGPT 网页
+            // 或打开 ChatGPT 网页
             // await open('https://chatgpt.com/', {
             //     app: { name: 'chrome' },
             //     newInstance: true

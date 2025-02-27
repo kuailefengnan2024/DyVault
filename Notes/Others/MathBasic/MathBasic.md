@@ -8,6 +8,8 @@
 
 ![](d:/BaiduSyncdisk/DyVault/Notes/Others/MathBasic/images/2025-02-21-14-36-15.png)
 
+![](d:/BaiduSyncdisk/DyVault/Notes/Others/MathBasic/images/2025-02-27-20-39-36.png)
+
 ![](d:/BaiduSyncdisk/DyVault/Notes/Others/MathBasic/images/2025-02-21-14-23-12.png)
 
 
