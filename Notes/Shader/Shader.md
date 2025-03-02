@@ -15,6 +15,8 @@ final_color = ACES_Tonemapping(final_color_linear); // 将线性颜色应用ACES
 float3 final_color_gamma = pow(final_color, 1.0 / 2.2); // 线性空间 >> 伽马空间 , 显示器非线性 所以不能直接输出线性颜色 应用伽马校正 
 ```
 
+tex2D/texCUBE 采样的输出值范围都是 0 到 1 
+
 ---
 
 >*Unity/UE/用途*
