@@ -58,3 +58,17 @@ float fit(float value, float a, float b)
 }
 
 
+// ACES_Tonemapping 函数  //inline 的意思是告诉编译器“请尽量将 ACES_Tonemapping 的函数体直接嵌入到调用处，以优化性能”。
+float3 ACES_Tonemapping(float3 x)
+{
+    float a = 2.51f;
+    float b = 0.03f;
+    float c = 2.43f;
+    float d = 0.59f;
+    float e = 0.14f;
+    float3 encode_color = x * (a * x + b) / (x * (c * x + d) + e);
+    return encode_color;
+}
+
+
+

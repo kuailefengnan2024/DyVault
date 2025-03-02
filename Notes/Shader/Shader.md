@@ -1,3 +1,29 @@
+
+---
+
+### 贴图处理的某些常用函数
+*tex2D/texCUBE 采样的输出值范围都是 0 到 1,所以下述是可行的*
+
+```
+# 限制贴图MinMax
+NewMap = lerp(_Min,_Max,OriginalMap)
+一种限制某张贴图如Roughness的值在设定范围之间的方法
+```
+
+```
+# 使得某张贴图值亮的更亮暗的更暗 S曲线效果
+NewMap = smoothstep(_Min,_Max,OriginalMap)
+```
+
+
+```
+# 使得某张贴图值缓动 调亮曲线效果
+NewMap = OriginalMap * (1.7 - 0.7 * OriginalMap)
+```
+
+---
+
+
 >Tags{"LightMode"="ForwardBase"}
 >确认主光源 防止混乱
 
@@ -14,8 +40,9 @@ float3 final_color_linear = pow(final_color, 2.2); // 伽马空间 >> 线性空�
 final_color = ACES_Tonemapping(final_color_linear); // 将线性颜色应用ACES色调映射 HDR >> LDR，范围限制在 [0, 1],显示器上看起来自然
 float3 final_color_gamma = pow(final_color, 1.0 / 2.2); // 线性空间 >> 伽马空间 , 显示器非线性 所以不能直接输出线性颜色 应用伽马校正 
 ```
-
-tex2D/texCUBE 采样的输出值范围都是 0 到 1 
+上述内容来源于老师 Grok说不用这么麻烦 那么只了解 并且记住ACES即可
+- 1 线性空间计算更加先进 URP就是 无需来回转换 Built in是伽马空间计算
+- 2 ACES映射 可以将超出1的颜色值捕捉到 适合处理HDR或者其他因为*各种参数导致的颜色数值过大
 
 ---
 
