@@ -78,7 +78,11 @@ p_{\phi}(x) = \int p_{\phi}(x|z)p(z) \, dz
 
 ![](d:/BaiduSyncdisk/DyVault/Notes/Others/MathBasic/images/2025-02-21-14-36-15.png)
 
-![](d:/BaiduSyncdisk/DyVault/Notes/Others/MathBasic/images/2025-02-27-20-39-36.png)
+>![](d:/BaiduSyncdisk/DyVault/Notes/Others/MathBasic/images/2025-02-27-20-39-36.png)
+>log函数可以将0-1的值映射到负无穷到0,方便计算机处理 这个在神经网络中经常使用
+
+>![](d:/BaiduSyncdisk/DyVault/Notes/Others/MathBasic/images/2025-03-02-21-12-37.png)
+>Pow中x参数越接近0,所有值就被拉向1,越增大,所有值就被拉向0
 
 ![](d:/BaiduSyncdisk/DyVault/Notes/Others/MathBasic/images/2025-02-21-14-23-12.png)
 
