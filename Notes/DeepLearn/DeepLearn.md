@@ -1,4 +1,42 @@
 
+---
+
+- **预训练Pre-Train**集合互联网**全部海量知识** 耗时 几个月
+- **后训练Fine-Tune中的-SFT**学习人工标注数据 **对话助手**专门训练 耗时 几天 人来赋予基模个性化
+- **强化学习RLHF** 选择黄色的最优路径 并调整模型参数 *Reinforcement Learning*
+ ![](d:/BaiduSyncdisk/DyVault/Notes/DeepLearn/images/2025-03-03-20-20-05.png)
+ RL的威力如下
+ ![](d:/BaiduSyncdisk/DyVault/Notes/DeepLearn/images/2025-03-03-20-56-03.png)
+
+##### 三者构成了LLM
+*RLHF让模型出现了反思Token 确保回答准确性 在deepseek论文中* 
+![](d:/BaiduSyncdisk/DyVault/Notes/DeepLearn/images/2025-03-03-20-29-13.png)
+
+#### DeepSeek论文核心观点
+1. **纯RL激发推理**：自发形成推理能力,Token数量暴增
+2. **GRPO创新**：Group Relative Policy Optimization，群体评分优化策略，高效低成本。
+3. **推理自进化**：Aha时刻出现“顿悟”，自优化显著提升表现。
+4. **多阶段优化**：结合少量初始数据+多轮RL，改善语言混杂，推理媲美o1。
+5. **蒸馏传承**：监督微调将推理能力高效转移至小模型。
+
+
+---
+
+>#### Model需要Token来思考
+>- 使用use code是最准确的
+![](d:/BaiduSyncdisk/DyVault/Notes/DeepLearn/images/2025-03-03-19-57-47.png)
+>- 或让回答的计算结果后置在回答的**末端**可以:
+>  - 充分利用神经元(多走几遍神经元流程)(回答的字数/**Token更多**)(**靠心算**)
+>  - 使得回答更准确而非直接给出结果(使用很**少Token**)(**靠猜**)
+>  - Model只能看到**Token** 而无法看到**字符** 所以幼稚的错误
+
+
+
+
+
+
+
+
 >**NumPy**：适合数值计算，尤其是多维数组和矩阵操作。
 >**OpenCV**：专注于图像和视频处理，功能强大且实用。
 
