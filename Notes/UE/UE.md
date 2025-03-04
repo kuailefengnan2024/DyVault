@@ -1,3 +1,31 @@
+VAT
+
+![](d:/BaiduSyncdisk/DyVault/Notes/UE/images/2025-03-04-19-42-39.png)
+
+如果render不生效 改尺寸试试
+![](d:/BaiduSyncdisk/DyVault/Notes/UE/images/2025-03-04-20-05-18.png)
+
+
+两个pass都导出一遍 然后将文件夹扔到ue中(包含fbx和所有tex的文件夹)
+![](d:/BaiduSyncdisk/DyVault/Notes/UE/images/2025-03-04-20-17-45.png)
+
+
+| 导入注意选项 | 注意选项 2 |
+|-------|-------|
+|   ![](d:/BaiduSyncdisk/DyVault/Notes/UE/images/2025-03-04-20-16-34.png)    |    ![](d:/BaiduSyncdisk/DyVault/Notes/UE/images/2025-03-04-20-19-15.png) |
+
+网格体操作
+![](d:/BaiduSyncdisk/DyVault/Notes/UE/images/2025-03-04-20-23-26.png)
+
+纹理操作:
+| 全部设为hdr高精度 | 设为最近 |
+|-------|-------|
+|   ![](d:/BaiduSyncdisk/DyVault/Notes/UE/images/2025-03-04-21-13-34.png)|    ![](d:/BaiduSyncdisk/DyVault/Notes/UE/images/2025-03-04-19-28-24.png)
+   |
+
+创建材质的uv数设为4方便tex使用 另外创建材质实例应用三张tex
+![](d:/BaiduSyncdisk/DyVault/Notes/UE/images/2025-03-04-20-09-35.png)
+
 >ue中实例是基于类创建的具体对象 类是一种模板，比如Actor类可以定义R Location Scale Material等等
 >![](d:/BaiduSyncdisk/DyVault/Notes/UE/images/2025-02-21-22-08-25.png)
 >1. **对象引用**：用于引用具体的场景中的actor或对象，确保该对象在引用期间不被垃圾回收。
