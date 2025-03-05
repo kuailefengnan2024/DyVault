@@ -170,6 +170,8 @@ p_{\phi}(x) = \int p_{\phi}(x|z)p(z) \, dz
 
 ![](d:/BaiduSyncdisk/DyVault/Notes/Others/MathBasic/images/2025-02-21-14-23-12.png)
 
+>可以理解为输入和输出都是数组 并且输出概率加起来为1 **让突出的更加突出**
+>![](d:/BaiduSyncdisk/DyVault/Notes/Others/MathBasic/images/2025-03-05-13-14-41.png)
 
 ---
 
