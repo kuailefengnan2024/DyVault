@@ -43,7 +43,7 @@ class CreateFolderStructureOperator(bpy.types.Operator):
             base_dir = os.path.join(directory, full_folder_name)
 
             # 定义需要创建的子文件夹
-            subfolders = ['Sketch', 'Tex', 'Blender', 'Output', 'Fbx', 'Postprocess']
+            subfolders = ['Sketch', 'Tex', 'Blender', 'Output', 'Fbx', 'Postprocess', 'Workflow', 'Other', 'Expand']
 
             # 创建主文件夹及子文件夹
             os.makedirs(base_dir, exist_ok=True)
