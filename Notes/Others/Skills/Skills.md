@@ -1,5 +1,5 @@
 nvidia-smi 检查cuda版本
-
+cursor中的mcp是client --- mcp Protocol协议 --- mcp server(访问本地或者远程)
 
 ### 资产库
 * 新建catalog，在具体的资产库文件中，以创建目录实体文件
