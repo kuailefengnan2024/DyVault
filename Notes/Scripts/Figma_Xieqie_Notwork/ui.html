@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>文本水平倾斜工具</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 20px;
+      font-family: Arial, sans-serif;
+    }
+    .input-container {
+      margin: 10px 0;
+    }
+    input[type="number"] {
+      width: 60px;
+      margin-left: 10px;
+    }
+    button {
+      margin: 5px;
+      padding: 8px 16px;
+    }
+  </style>
+</head>
+<body>
+  <div>
+    <div class="input-container">
+      <label>水平倾斜（°）： <input type="number" id="horizontal-skew" value="0" min="-45" max="45" step="1"></label>
+    </div>
+    <button id="reset">重置</button>
+    <button id="apply">应用</button>
+  </div>
+  <script src="ui.js"></script>
+</body>
+</html>
