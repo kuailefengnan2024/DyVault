@@ -1,4 +1,29 @@
+![](d:/BaiduSyncdisk/DyVault/Notes/DeepLearn/images/2025-03-11-14-12-02.png)
+激活函数将线性函数转换为非线性 能够更好的拟合现实世界
 
+
+![](d:/BaiduSyncdisk/DyVault/Notes/DeepLearn/images/2025-03-11-14-24-12.png)
+一层一个激活函数
+
+![](d:/BaiduSyncdisk/DyVault/Notes/DeepLearn/images/2025-03-11-14-25-16.png)
+一层激活一层线性套套套就是一层＋一层 形成了前向传播
+
+
+![](d:/BaiduSyncdisk/DyVault/Notes/DeepLearn/images/2025-03-11-14-32-08.png)
+神经网络干的事就是从x1和x2中学习到w1,w2,b1,b2, 然后预测y
+
+
+
+
+![](d:/BaiduSyncdisk/DyVault/Notes/DeepLearn/images/2025-03-11-14-47-13.png)
+![](d:/BaiduSyncdisk/DyVault/Notes/DeepLearn/images/2025-03-11-14-50-33.png)
+均方误差：以样本数均分误差的平方
+
+![](d:/BaiduSyncdisk/DyVault/Notes/DeepLearn/images/2025-03-11-14-51-05.png)
+![](d:/BaiduSyncdisk/DyVault/Notes/DeepLearn/images/2025-03-11-19-43-25.png)
+
+![](d:/BaiduSyncdisk/DyVault/Notes/DeepLearn/images/2025-03-11-19-45-11.png)
+偏导数求导可视化
 
 >#### 代码和3d也是一样的 不要总是自己造轮子 要使用现成的工具和代码来实现自己想要的东西
 >#### 竞争力往往体现在 组装能力 / 把控能力 / 创新能力
