@@ -1,4 +1,16 @@
 {
+	"FlowChart": {
+		"prefix": "FlowChart",
+		"description": "",
+		"scope": "markdown",
+		"body": [
+			"```mermaid",
+			"",
+			"",
+			"```",
+			""
+		]
+	},
 	"Fold": {
 		"prefix": "Fold",
 		"description": "",

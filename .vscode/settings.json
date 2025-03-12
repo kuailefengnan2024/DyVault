@@ -9,8 +9,10 @@
     "files.associations": {
         "*.hlsl": "hlsl",
         "*.fx": "hlsl"
+    },
+     // 显示.git文件夹
+     "files.exclude": {
+        "**/.git": false
     }
-    
-
     
 }

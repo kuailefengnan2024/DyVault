@@ -1,3 +1,26 @@
+
+
+
+```mermaid
+flowchart TD
+    A["文生图流程<br>(Text-to-Image)"] --> B["输入文本<br>格式: String<br>(自然语言文本)"]
+    C["图生图流程<br>(Image-to-Image)"] --> D["输入初始图像<br>格式: Tensor<br>(通常为H×W×3的RGB图像)"]
+    
+    B --> E["Clip<br>文本编码为条件嵌入<br>输入: String<br>输出: Tensor<br>(通常为77×768的嵌入向量)"]
+    
+    E --> F["Unet<br>扩散降噪生成潜在表示<br>基于Clip条件<br>输入: Tensor(潜在表示)+Tensor(条件)<br>输出: Tensor<br>(通常为C×H/8×W/8)"]
+    
+    F --> G["VAE<br>解码为最终图像<br>输入: Tensor(潜在表示)<br>输出: Tensor<br>(H×W×3的RGB图像)"]
+    
+    G --> H["输出图像<br>格式: Tensor<br>(H×W×3的RGB图像)"]
+    
+    D --> I["VAE<br>编码为潜在表示<br>输入: Tensor(H×W×3)<br>输出: Tensor<br>(C×H/8×W/8的潜在表示)"]
+    
+    I --> E
+```
+
+
+
 ![](d:/BaiduSyncdisk/DyVault/Notes/DeepLearn/images/2025-03-11-14-12-02.png)
 激活函数将线性函数转换为非线性 能够更好的拟合现实世界
 
