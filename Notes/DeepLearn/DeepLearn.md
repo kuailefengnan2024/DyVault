@@ -20,27 +20,30 @@ flowchart TD
 ```
 
 
-
-![](d:/BaiduSyncdisk/DyVault/Notes/DeepLearn/images/2025-03-11-14-12-02.png)
-激活函数将线性函数转换为非线性 能够更好的拟合现实世界
+![](d:/BaiduSyncdisk/DyVault/Notes/DeepLearn/images/2025-03-14-19-09-03.png)
 
 
-![](d:/BaiduSyncdisk/DyVault/Notes/DeepLearn/images/2025-03-11-14-24-12.png)
-一层一个激活函数
-
-![](d:/BaiduSyncdisk/DyVault/Notes/DeepLearn/images/2025-03-11-14-25-16.png)
-一层激活一层线性套套套就是一层＋一层 形成了前向传播
+>![](d:/BaiduSyncdisk/DyVault/Notes/DeepLearn/images/2025-03-11-14-12-02.png)
+>激活函数将线性函数转换为非线性 能够更好的拟合现实世界
+>为了解决神经网络中线性变换无法处理非线性问题的情况
 
 
-![](d:/BaiduSyncdisk/DyVault/Notes/DeepLearn/images/2025-03-11-14-32-08.png)
-神经网络干的事就是从x1和x2中学习到w1,w2,b1,b2, 然后预测y
+>![](d:/BaiduSyncdisk/DyVault/Notes/DeepLearn/images/2025-03-11-14-24-12.png)
+>一层一个激活函数
+
+>![](d:/BaiduSyncdisk/DyVault/Notes/DeepLearn/images/2025-03-11-14-25-16.png)
+>一层激活一层线性套套套就是一层＋一层 形成了前向传播
+
+
+>![](d:/BaiduSyncdisk/DyVault/Notes/DeepLearn/images/2025-03-11-14-32-08.png)
+>神经网络训练就是从x1和x2中猜到w1,w2,b1,b2
 
 
 
 
-![](d:/BaiduSyncdisk/DyVault/Notes/DeepLearn/images/2025-03-11-14-47-13.png)
-![](d:/BaiduSyncdisk/DyVault/Notes/DeepLearn/images/2025-03-11-14-50-33.png)
-均方误差：以样本数均分误差的平方
+>![](d:/BaiduSyncdisk/DyVault/Notes/DeepLearn/images/2025-03-11-14-47-13.png)
+>![](d:/BaiduSyncdisk/DyVault/Notes/DeepLearn/images/2025-03-11-14-50-33.png)
+>均方误差：以样本数均分误差的平方
 
 ![](d:/BaiduSyncdisk/DyVault/Notes/DeepLearn/images/2025-03-11-14-51-05.png)
 ![](d:/BaiduSyncdisk/DyVault/Notes/DeepLearn/images/2025-03-11-19-43-25.png)
