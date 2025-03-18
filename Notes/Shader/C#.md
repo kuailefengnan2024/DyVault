@@ -1,3 +1,6 @@
+MonoBehaviour 连接了脚本 和 Unity 引擎
+
+
 ### C# 基础速通（Shader技术美术相关）
 
 | 内容                 | 描述                                                                                               |
