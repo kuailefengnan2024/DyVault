@@ -13,6 +13,11 @@
 ![](d:/BaiduSyncdisk/DyVault/Notes/Others/Todo/images/2025-03-17-15-55-42.png)
 
 大致思路
+
+先搭框架
+![](d:/BaiduSyncdisk/DyVault/Notes/DeepLearn/images/2025-03-18-22-57-45.png)
+不要既要又要 先搭框架 再慢慢加
+
 打僵尸 红警视角 主角画面中心
 两分钟一个关卡
 只做三个关卡的demo还是在模版基础上改动
