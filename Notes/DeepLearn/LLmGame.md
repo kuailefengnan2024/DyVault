@@ -8,6 +8,8 @@
 
 对话是否更加创新？
 
+类似flappy bird 和 cube 只有一关  这一关是无限的 分数是最大的反馈
+
 每个关卡实现下列功能
 文本生成控制属性 属性影响行为 行为影响结果 结果影响文本生成
 ![](d:/BaiduSyncdisk/DyVault/Notes/Others/Todo/images/2025-03-17-15-55-42.png)
