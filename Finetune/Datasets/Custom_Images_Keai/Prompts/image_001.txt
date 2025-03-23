@@ -1,0 +1,1 @@
+处理图像时出错：API请求失败，经过3次尝试: 503 Server Error: Service Temporarily Unavailable for url: https://api-inference.huggingface.co/models/microsoft/florence-2-large
