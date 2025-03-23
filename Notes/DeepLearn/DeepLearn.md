@@ -1,3 +1,35 @@
+![](d:/BaiduSyncdisk/DyVault/Notes/DeepLearn/images/2025-03-23-14-37-34.png)
+![](d:/BaiduSyncdisk/DyVault/Notes/DeepLearn/images/2025-03-23-14-38-45.png)
+flux重复选择1即可
+- Epoch：模型看数据的“遍数”。多则学得深，但可能过拟合；少则学得浅，可能欠拟合。
+- 学习率：模型学习的“步幅”。高则学得快，但可能不稳；低则学得慢，但更稳定。
+- Batch Size 决定了每次参数更新时模型处理的训练样本数量，越大越快但不稳，越小越稳但训练时间更长。
+
+
+```
+在项目目录下创建并激活虚拟环境
+python -m venv venv
+venv\Scripts\activate  
+pip install -r requirements.txt
+
+注释 python可以替换为"C:\Program Files\Python311\python.exe"这样env中的依赖默认使用指定python
+```
+
+```
+新建一个bat文件 可以命名为activate_env.bat 内容如下 即可在当前目录中激活虚拟环境来运行项目 默认会打开cmd窗口 更方便
+@echo off
+call G:\Finetune\kohya_ss\venv\Scripts\activate
+cmd /k
+```
+
+```
+或者新建一个bat文件 可以命名为run_kohya_gui.bat 内容如下 即可在当前目录中激活虚拟环境来运行项目 默认会打开cmd窗口 更方便
+@echo off
+call G:\Finetune\kohya_ss\venv\Scripts\activate
+python kohya_gui.py
+cmd /k
+```
+
 ![](d:/BaiduSyncdisk/DyVault/Notes/DeepLearn/images/2025-03-17-22-27-19.png)
 
 
