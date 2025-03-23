@@ -79,4 +79,31 @@ wheels/
 Thumbs.db
 ehthumbs.db
 Desktop.ini
-$RECYCLE.BIN/ 
+$RECYCLE.BIN/
+
+# 模型文件和目录
+## 常见模型文件夹
+model/
+models/
+Model/
+Models/
+trained_models/
+saved_models/
+checkpoints/
+weights/
+pretrained/
+
+## 常见模型文件格式
+*.model
+*.weights
+*.h5
+*.hdf5
+*.pb
+*.pt
+*.pth
+*.onnx
+*.tflite
+*.mlmodel
+*.pkl
+*.joblib
+*.bin 
