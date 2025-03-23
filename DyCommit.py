@@ -30,9 +30,19 @@ def add_and_push():
     if run_command("git commit -m '自动提交'")[0] != 0:
         return  # 如果命令失败，则退出
 
+    # 先拉取远程更改，确保本地分支是最新的
+    print("Pulling changes from remote repository...")
+    pull_result = run_command("git pull --rebase origin main")
+    if pull_result[0] != 0:
+        print("警告: 拉取远程更改失败，可能需要手动解决冲突")
+        return  # 如果拉取失败，则退出
+
     # 推送更改到远程 main 分支
     if run_command("git push origin main")[0] != 0:
+        print("推送失败，请尝试手动解决问题")
         return  # 如果命令失败，则退出
+    else:
+        print("成功推送更改到远程仓库")
 
 # 立即执行 add 和 push
 add_and_push()
