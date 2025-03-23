@@ -2,7 +2,7 @@ import os
 import argparse
 import torch
 from PIL import Image
-from transformers import AutoProcessor, AutoModelForCausalLM
+from transformers import AutoFeatureExtractor, VisionEncoderDecoderModel, AutoTokenizer
 
 # 在这里设置图片目录路径 - 修复反斜杠问题
 IMAGE_DIRECTORY = r"D:\BaiduSyncdisk\DyVault\Finetune\Datasets\Custom_Images_Keai"  # 请修改为您的图片目录路径
@@ -42,8 +42,9 @@ def generate_prompts(directory_path=None, model_name="microsoft/florence-2-base"
     print(f"正在加载 Florence-2 模型: {model_name}")
     try:
         # 加载模型和处理器
-        processor = AutoProcessor.from_pretrained(model_name, trust_remote_code=True)
-        model = AutoModelForCausalLM.from_pretrained(model_name, trust_remote_code=True)
+        feature_extractor = AutoFeatureExtractor.from_pretrained("google/vit-base-patch16-224")
+        tokenizer = AutoTokenizer.from_pretrained("gpt2")
+        model = VisionEncoderDecoderModel.from_encoder_decoder_pretrained("google/vit-base-patch16-224", "gpt2")
         
         # 如果有CUDA可用，则使用GPU
         device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
@@ -66,7 +67,7 @@ def generate_prompts(directory_path=None, model_name="microsoft/florence-2-base"
             image = Image.open(input_path).convert("RGB")
             
             # 准备模型输入
-            inputs = processor(images=image, return_tensors="pt").to(device)
+            inputs = feature_extractor(images=image, return_tensors="pt").to(device)
             
             # 生成描述
             with torch.no_grad():
@@ -78,7 +79,7 @@ def generate_prompts(directory_path=None, model_name="microsoft/florence-2-base"
                 )
             
             # 解码生成的ID，获取文本描述
-            generated_text = processor.batch_decode(generated_ids, skip_special_tokens=True)[0]
+            generated_text = tokenizer.batch_decode(generated_ids, skip_special_tokens=True)[0]
             
             # 将描述写入文本文件
             with open(output_path, 'w', encoding='utf-8') as f:
@@ -128,8 +129,9 @@ def generate_prompts_with_caption_task(directory_path=None, model_name="microsof
     print(f"正在加载 Florence-2 模型: {model_name}")
     try:
         # 加载模型和处理器
-        processor = AutoProcessor.from_pretrained(model_name, trust_remote_code=True)
-        model = AutoModelForCausalLM.from_pretrained(model_name, trust_remote_code=True)
+        feature_extractor = AutoFeatureExtractor.from_pretrained("google/vit-base-patch16-224")
+        tokenizer = AutoTokenizer.from_pretrained("gpt2")
+        model = VisionEncoderDecoderModel.from_encoder_decoder_pretrained("google/vit-base-patch16-224", "gpt2")
         
         # 如果有CUDA可用，则使用GPU
         device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
@@ -152,7 +154,7 @@ def generate_prompts_with_caption_task(directory_path=None, model_name="microsof
             image = Image.open(input_path).convert("RGB")
             
             # 准备模型输入并指示执行图像描述任务
-            inputs = processor(
+            inputs = feature_extractor(
                 images=image, 
                 text="Describe this image in detail:", 
                 return_tensors="pt"
@@ -170,7 +172,7 @@ def generate_prompts_with_caption_task(directory_path=None, model_name="microsof
                 )
             
             # 解码生成的ID，获取文本描述
-            generated_text = processor.batch_decode(generated_ids, skip_special_tokens=True)[0]
+            generated_text = tokenizer.batch_decode(generated_ids, skip_special_tokens=True)[0]
             
             # 清理提示词部分，只保留生成的描述
             if "Describe this image in detail:" in generated_text:

@@ -1,8 +1,3 @@
-```
-使用py的时候 优先激活当前项目的python
-.\.venv\Scripts\Activate.ps1
-输入 (Get-Command python).Source 可以查看当前python路径
-```
 
 ![](d:/BaiduSyncdisk/DyVault/Notes/DeepLearn/images/2025-03-23-14-37-34.png)
 ![](d:/BaiduSyncdisk/DyVault/Notes/DeepLearn/images/2025-03-23-14-38-45.png)
@@ -20,6 +15,14 @@ pip install -r requirements.txt
 
 注释 python可以替换为"C:\Program Files\Python311\python.exe"这样env中的依赖默认使用指定python
 ```
+
+```
+使用py的时候 优先激活当前项目的python
+.\.venv\Scripts\Activate.ps1
+输入 (Get-Command python).Source 可以查看当前python路径
+```
+
+
 
 ```
 新建一个bat文件 可以命名为activate_env.bat 内容如下 即可在当前目录中激活虚拟环境来运行项目 默认会打开cmd窗口 更方便
