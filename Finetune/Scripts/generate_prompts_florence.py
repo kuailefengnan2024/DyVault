@@ -2,7 +2,7 @@ import os
 import argparse
 import torch
 from PIL import Image
-from transformers import AutoProcessor, AutoModel
+from transformers import AutoProcessor, AutoModelForCausalLM
 
 # 在这里设置图片目录路径 - 修复反斜杠问题
 IMAGE_DIRECTORY = r"D:\BaiduSyncdisk\DyVault\Finetune\Datasets\Custom_Images_Keai"  # 请修改为您的图片目录路径
@@ -43,7 +43,7 @@ def generate_prompts(directory_path=None, model_name="microsoft/florence-2-base"
     try:
         # 加载模型和处理器
         processor = AutoProcessor.from_pretrained(model_name, trust_remote_code=True)
-        model = AutoModel.from_pretrained(model_name, trust_remote_code=True)
+        model = AutoModelForCausalLM.from_pretrained(model_name, trust_remote_code=True)
         
         # 如果有CUDA可用，则使用GPU
         device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
@@ -129,7 +129,7 @@ def generate_prompts_with_caption_task(directory_path=None, model_name="microsof
     try:
         # 加载模型和处理器
         processor = AutoProcessor.from_pretrained(model_name, trust_remote_code=True)
-        model = AutoModel.from_pretrained(model_name, trust_remote_code=True)
+        model = AutoModelForCausalLM.from_pretrained(model_name, trust_remote_code=True)
         
         # 如果有CUDA可用，则使用GPU
         device = torch.device("cuda" if torch.cuda.is_available() else "cpu")

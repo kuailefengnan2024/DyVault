@@ -1,3 +1,9 @@
+```
+使用py的时候 优先激活当前项目的python
+.\.venv\Scripts\Activate.ps1
+输入 (Get-Command python).Source 可以查看当前python路径
+```
+
 ![](d:/BaiduSyncdisk/DyVault/Notes/DeepLearn/images/2025-03-23-14-37-34.png)
 ![](d:/BaiduSyncdisk/DyVault/Notes/DeepLearn/images/2025-03-23-14-38-45.png)
 flux重复选择1即可
