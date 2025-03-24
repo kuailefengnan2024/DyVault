@@ -10,3 +10,5 @@
 # 下载模型 运行download_model.py 下载模型
 
 
+* Model Output 存放训练完的模型和其他数据
+* Scripts内脚本处理图片和prompt 
