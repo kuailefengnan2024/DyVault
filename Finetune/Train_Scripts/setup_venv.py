@@ -64,6 +64,18 @@ def main():
     except Exception as e:
         print(f"安装过程中发生异常: {e}")
     
+    # 确保gradio正确安装，这对kohya_ss的GUI功能至关重要
+    print("\n确保gradio正确安装...")
+    try:
+        venv_pip = [str(python_executable), "-m", "pip", "install", "gradio==4.43.0", "--no-deps"]
+        subprocess.run(venv_pip, check=True)
+        print("gradio 4.43.0 安装成功！")
+    except Exception as e:
+        print(f"安装gradio时发生异常: {e}")
+        print("尝试安装gradio的完整依赖...")
+        venv_pip = [str(python_executable), "-m", "pip", "install", "gradio==4.43.0"]
+        subprocess.run(venv_pip, check=True)
+    
     if python_version.major == 3 and python_version.minor >= 11:
         print("\n注意：由于使用的是Python 3.11+版本，wandb相关功能可能无法正常使用。")
         print("这是因为wandb依赖的pathtools包使用了在Python 3.11+中被移除的'imp'模块。")
