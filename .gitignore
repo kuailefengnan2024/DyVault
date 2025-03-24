@@ -238,6 +238,12 @@ kohyass*/
 !Finetune/sd-scripts/
 !Finetune/sd-scripts/**
 !Finetune/sd-scripts/**/* 
+!lora*/
+!LoRA*/
+!*/lora*/
+!*/LoRA*/
+!**/lora/
+!**/LoRA/
 
 # Finetune 目录特定规则
 ## CUDNN for Windows
