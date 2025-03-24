@@ -118,12 +118,6 @@ large_models/
 embeddings*/
 tokenizers*/
 
-# sd scripts 文件夹特别保留（不忽略）
-!sd scripts/
-!sd_scripts/
-!*/sd scripts/
-!*/sd_scripts/
-
 # 特定AI模型和框架
 ## LLM相关
 llm*/
@@ -239,3 +233,49 @@ kohyass*/
 *.dvae
 *.vae
 *.unet 
+
+# 白名单 - 这些文件和目录不会被忽略
+!Finetune/sd-scripts/
+!Finetune/sd-scripts/**
+!Finetune/sd-scripts/**/* 
+
+# Finetune 目录特定规则
+## CUDNN for Windows
+Finetune/cudnn_windows/
+
+## Scripts and executables
+Finetune/locon/
+Finetune/gui-user.bat
+Finetune/gui-user.ps1
+
+## Version control
+Finetune/SmilingWolf/
+Finetune/wandb/
+
+## Setup and logs
+Finetune/setup.log
+Finetune/logs/
+
+## Miscellaneous
+Finetune/uninstall.txt
+
+## Test files
+Finetune/test/output/
+Finetune/test/log*
+Finetune/test/*.json
+Finetune/test/ft/
+
+## Temporary requirements
+Finetune/requirements_tmp_for_setup.txt
+
+## 特定文件和目录
+Finetune/*.npz
+Finetune/presets/*/user_presets/*
+Finetune/inputs/
+Finetune/outputs/
+Finetune/dataset/**
+!Finetune/dataset/**/
+!Finetune/dataset/**/.gitkeep
+Finetune/models/
+Finetune/data/
+Finetune/config.toml 
