@@ -93,6 +93,11 @@ checkpoints/
 weights/
 pretrained/
 
+# kohyass 相关目录
+kohyass/
+kohyass*/
+*/kohyass/
+
 ## 常见模型文件格式
 *.model
 *.weights
