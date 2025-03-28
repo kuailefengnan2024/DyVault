@@ -1,4 +1,16 @@
 
+```dotnetcli
+
+可以使用conda创建虚拟环境 和 python env的区别在于 会包含C++的库和功能 默认保存在c盘
+(base) PS D:\nanoGPT> conda activate nanoGPT
+(nanoGPT) PS D:\nanoGPT> conda info --envs
+
+# conda environments:
+#
+nanoGPT              * C:\Users\Admin\.conda\envs\nanoGPT
+base                   D:\anaconda3
+```
+
 ![](d:/BaiduSyncdisk/DyVault/Notes/DeepLearn/images/2025-03-23-14-37-34.png)
 ![](d:/BaiduSyncdisk/DyVault/Notes/DeepLearn/images/2025-03-23-14-38-45.png)
 flux重复选择1即可

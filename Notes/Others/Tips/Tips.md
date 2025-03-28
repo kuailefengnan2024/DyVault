@@ -1,7 +1,7 @@
 4514 6175 8667 2141
 0325 
 
-
+Get-Command python 找当前python路径
 
 愿景远大
 但一定要小ego
