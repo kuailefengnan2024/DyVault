@@ -10,6 +10,7 @@
 ```dotnetcli
 
 可以使用conda创建虚拟环境 和 python env的区别在于 会包含C++的库和功能 默认保存在c盘
+conda create --name ENV_NAME
 (base) PS D:\nanoGPT> conda activate nanoGPT
 (nanoGPT) PS D:\nanoGPT> conda info --envs
 
