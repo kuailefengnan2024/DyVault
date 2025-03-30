@@ -1,5 +1,15 @@
-4514 6175 8667 2141
-0325 
+```
+这个settings.json可以激活默认指定env
+{
+    "python.defaultInterpreterPath": "G:\\anaconda3\\envs\\Nanogptenv\\python.exe",
+    "terminal.integrated.inheritEnv": true,
+    "python.terminal.activateEnvironment": true
+}
+```
+
+>Visa
+>4514 6175 8667 2141
+>0325 
 
 Get-Command python 找当前python路径
 
