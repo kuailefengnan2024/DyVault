@@ -13,10 +13,10 @@ Grain Islands 纹理孤岛
 **uvlayout**专注于调整uv布局
 **texel_density**专注于倍数调整uv大小（分辨率）
 **export_uv_wireframe** 专注于导出uv线框图片到ps编辑
-![](d:/BaiduSyncdisk/DyVault/Notes/Houdini/images/2024-12-19-23-18-55.png)
-![](d:/BaiduSyncdisk/DyVault/Notes/Houdini/images/2024-12-19-23-19-16.png)
-![](d:/BaiduSyncdisk/DyVault/Notes/Houdini/images/2024-12-19-23-19-39.png)
-![](d:/BaiduSyncdisk/DyVault/Notes/Houdini/images/2024-12-19-23-20-30.png)
+![](./images/2024-12-19-23-18-55.png)
+![](./images/2024-12-19-23-19-16.png)
+![](./images/2024-12-19-23-19-39.png)
+![](./images/2024-12-19-23-20-30.png)
 **uvproject**的几种投影方式
 我理解就是将猪头贴到投影方式上
 正投影，Orthographic；
@@ -45,11 +45,11 @@ sweep节点可以生成uv数据 使用uv视图可以查看
 | Split          | 将几何体分割为多个部分，基于指定条件。          |
 
 >##### Groupbyrange:
->![](d:/BaiduSyncdisk/DyVault/Notes/Houdini/images/2024-11-28-13-53-38.png)
-![](d:/BaiduSyncdisk/DyVault/Notes/Houdini/images/2024-11-28-13-54-13.png)
+>![](./images/2024-11-28-13-53-38.png)
+![](./images/2024-11-28-13-54-13.png)
 
 >精简曲线不必要的点(polyframe生成切线法线)
-![](d:/BaiduSyncdisk/DyVault/Notes/Houdini/images/2024-12-05-19-47-21.png)
+![](./images/2024-12-05-19-47-21.png)
 facet减线点
 poly reduce 减面
 

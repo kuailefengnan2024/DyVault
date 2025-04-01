@@ -7,23 +7,23 @@
 
 
 >编辑资产参数思路:主电缆 副电缆 模拟(优化)
-![](d:/BaiduSyncdisk/DyVault/Notes/Houdini/images/2024-12-09-13-50-12.png)
+![](./images/2024-12-09-13-50-12.png)
 
 
-![](d:/BaiduSyncdisk/DyVault/Notes/Houdini/images/2024-12-05-13-16-56.png)
-![](d:/BaiduSyncdisk/DyVault/Notes/Houdini/images/2024-12-05-13-17-28.png)
+![](./images/2024-12-05-13-16-56.png)
+![](./images/2024-12-05-13-17-28.png)
 
 >螺旋线制作方法 扭转扫描
-![](d:/BaiduSyncdisk/DyVault/Notes/Houdini/images/2024-12-05-12-38-02.png)
+![](./images/2024-12-05-12-38-02.png)
 
 
 叉乘前normalize记得
 
 
 >程序化切割平面(xz平面)
-![](d:/BaiduSyncdisk/DyVault/Notes/Houdini/images/2024-10-06-14-20-40.png)
+![](./images/2024-10-06-14-20-40.png)
 >addprim使用过程:
-![](d:/BaiduSyncdisk/DyVault/Notes/Houdini/images/2024-10-06-01-15-02.png)
+![](./images/2024-10-06-01-15-02.png)
 
 
 >用循环: 逐个处理、复杂逻辑、动态生成。
