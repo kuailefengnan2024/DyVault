@@ -3,7 +3,7 @@
 import numpy as np # 提供高效的多维数组操作和数学计算功能，是数据处理的基础。
 import torch
 import torchvision # 为计算机视觉任务提供数据集、模型和图像变换工具。
-import torchvision.transforms as transforms
+import torchvision.transforms as transforms # 提供图像变换功能，如标准化、裁剪等。
 import matplotlib.pyplot as plt  # 用于绘制图表和可视化数据，如训练过程中的损失曲线。
 import pandas as pd # 处理和分析结构化数据，如表格或 CSV 文件。
 from sklearn.model_selection import train_test_split # 提供数据拆分、评估指标和传统机器学习算法。
